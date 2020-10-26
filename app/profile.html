@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Он-лайн курс</title>
+	<title>Профиль</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.png">
@@ -77,47 +77,84 @@
 
 	<main class="main">
 
-		<section class="course tabs">
+		<section class="work tabs">
 			<div class="container">
 
-				<div class="crumbs">
-					<a href="#">Личный кабинет</a>
-					<span>/</span>
-					<a href="#">Мои курсы</a>
-					<span>/</span>
-					<a href="#">Он-лайн курс тренировок для новичка ХОЧУ ФИТНЕС»</a>
-					<span>/</span>
-					<span>День 21</span>
+				<div class="work__header work__header--course">
+					<ul class="tabs__list">
+						<li class="tabs__item">мои данные</li>
+						<li class="tabs__item">мои курсы</li>
+					</ul>
 				</div>
 
-				<h2>он-лайн курс тренировок для новичка <span>ХОЧУ ФИТНЕС</span></h2>
+				<form class="data tabs__wrap">
+					<div class="data__form">
+						<h3>Мои данные</h3>
+						<div class="data__form_line">
+							<label for="data__name">Ваше имя</label>
+							<input id="data__name" type="text" placeholder="Ваше имя">
+						</div>
+						<div class="data__form_line">
+							<label for="data__phone">Ваш телефон</label>
+							<input id="data__phone" type="tel" placeholder="Ваш телефон">
+						</div>
+						<div class="data__form_line">
+							<label for="data__mail">Ваш Email</label>
+							<input id="data__mail" type="email" placeholder="Ваш Email">
+						</div>
+					</div>
+					<div class="data__form">
+						<h3>Сменить пароль</h3>
+						<div class="data__form_line">
+							<label for="data__old-pass">Старый пароль</label>
+							<input id="data__old-pass" type="password" placeholder="Ваше имя">
+						</div>
+						<div class="data__form_line">
+							<label for="data__new-pass">Новый пароль</label>
+							<input id="data__new-pass" type="password" placeholder="Ваш телефон">
+						</div>
+						<div class="data__form_line">
+							<label for="data__repeat-pass">Повторите пароль</label>
+							<input id="data__repeat-pass" type="password" placeholder="Ваш Email">
+						</div>
+						<div class="data__form_btn">
+							<button class="btn">сохранить</button>
+						</div>
+					</div>
+				</form>
 
-				<div class="course__container">
-					<div class="course__article">
-						<h3>Разминка:</h3>
-						<p><b>“Тренировка Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod”</b></p>
-						<a href="https://www.youtube.com/watch?v=sqnsW2HrHI0" class="course__video" data-fancybox>
-							<img src="img/article1.jpg" alt="">
-							<span></span>
-						</a>
-					</div>
-					<div class="course__article">
-						<h3>Заминка:</h3>
-						<p><b>“Тренировка Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod”</b></p>
-						<a href="https://www.youtube.com/watch?v=sqnsW2HrHI0" class="course__video" data-fancybox>
-							<img src="img/article1.jpg" alt="">
-							<span></span>
-						</a>
-					</div>
-					<div class="course__article">
-						<h3>Тренировка:</h3>
-						<p><b>“Тренировка Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod”</b></p>
-						<a href="https://www.youtube.com/watch?v=sqnsW2HrHI0" class="course__video" data-fancybox>
-							<img src="img/article1.jpg" alt="">
-							<span></span>
-						</a>
-					</div>
+				<div class="profile tabs__wrap">
+					<div class="profile__list">
 
+						<div class="profile__item">
+							<div class="profile__wrap online__slide_wrap--blue">
+								<img src="img/icon/online__slide1.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+						<div class="profile__item">
+							<div class="profile__wrap online__slide_wrap--red">
+								<img src="img/icon/online__slide3.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+						<div class="profile__item">
+							<div class="profile__wrap online__slide_wrap--green">
+								<img src="img/icon/online__slide4.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+						<div class="profile__item">
+							<div class="profile__wrap online__slide_wrap--blue">
+								<img src="img/icon/online__slide2.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+					</div>
 				</div>
 
 			</div>

@@ -1529,7 +1529,7 @@
 				margin-bottom: 0
 
 
-.course
+.profile
 
 	&__list
 		display: flex
@@ -1699,7 +1699,6 @@
 			+r(1200)
 				margin-bottom: 15px
 
-
 	h3
 		text-align: center
 		margin-bottom: 40px
@@ -1715,3 +1714,145 @@
 		+r(480)
 			width: 100%
 			padding: 0 15px
+
+
+.course
+	padding: 40px 0
+
+	+r(992)
+		padding: 30px 0
+
+	h2
+		display: block
+		text-align: center
+		margin-bottom: 50px
+
+		+r(1200)
+			margin-bottom: 30px
+
+		+r(767)
+			margin-bottom: 20px
+
+	h3
+		margin-bottom: 40px
+
+		+r(1200)
+			margin-bottom: 20px
+
+		+r(767)
+			margin-bottom: 15px
+
+	p
+		margin-bottom: 35px
+		text-align: center
+		font-size: 18px
+
+		+r(1200)
+			margin-bottom: 20px
+			font-size: 16px
+
+		+r(767)
+			margin-bottom: 15px
+			font-size: 14px
+
+	&__container
+		max-width: 815px
+		width: 100%
+		margin: 0 auto
+		
+	&__article
+		margin-bottom: 50px
+
+		+r(1200)
+			margin-bottom: 40px
+
+		+r(992)
+			margin-bottom: 30px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__video
+		position: relative
+		display: block
+
+		&:hover
+			span
+				transform: translate(-50%, -50%) scale(.95)
+			
+		&:active
+			span
+				transform: translate(-50%, -50%) scale(1.05)
+
+		span
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			display: block
+			width: 125px
+			height: 125px
+			border-radius: 50%
+			background-color: rgba(#000, .9)
+			+transition
+
+			+r(1200)
+				width: 80px
+				height: 80px
+
+			+r(480)
+				width: 50px
+				height: 50px
+
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-20%, -50%)
+				border-bottom: 18px solid transparent
+				border-left: 30px solid #fff
+				border-right: 30px solid transparent
+				border-top: 18px solid transparent
+
+				+r(1200)
+					border-bottom: 12px solid transparent
+					border-left: 20px solid #fff
+					border-right: 20px solid transparent
+					border-top: 12px solid transparent
+
+				+r(480)
+					border-bottom: 8px solid transparent
+					border-left: 15px solid #fff
+					border-right: 15px solid transparent
+					border-top: 8px solid transparent
+
+		img
+			width: 100%
+
+.crumbs
+	display: flex
+	flex-wrap: wrap
+	color: #bec5ce
+	margin-bottom: 50px
+
+	+r(1200)
+		margin-bottom: 40px
+
+	+r(992)
+		margin-bottom: 30px
+
+	span
+		margin: 0 3px
+
+	a
+		color: #bec5ce
+
+		&:hover
+			color: $accent
+
+
+
+
+
+
