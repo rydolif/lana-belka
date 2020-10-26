@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Мои курсы</title>
+	<title>Регистрация</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.png">
@@ -77,85 +77,36 @@
 
 	<main class="main">
 
-		<section class="work tabs">
+		<section class="register tabs">
 			<div class="container">
 
-				<div class="work__header work__header--course">
-					<ul class="tabs__list">
-						<li class="tabs__item">мои данные</li>
-						<li class="tabs__item">мои курсы</li>
-					</ul>
-				</div>
-
-				<form class="data tabs__wrap">
-					<div class="data__form">
-						<h3>Мои данные</h3>
-						<div class="data__form_line">
-							<label for="data__name">Ваше имя</label>
-							<input id="data__name" type="text" placeholder="Ваше имя">
-						</div>
-						<div class="data__form_line">
-							<label for="data__phone">Ваш телефон</label>
-							<input id="data__phone" type="tel" placeholder="Ваш телефон">
-						</div>
-						<div class="data__form_line">
-							<label for="data__mail">Ваш Email</label>
-							<input id="data__mail" type="email" placeholder="Ваш Email">
-						</div>
+				<form class="register__form">
+					<h3>Регистрация</h3>
+					<div class="data__form_line">
+						<input id="data__mail" type="email" placeholder="Ваш Email" required>
 					</div>
-					<div class="data__form">
-						<h3>Сменить пароль</h3>
-						<div class="data__form_line">
-							<label for="data__old-pass">Старый пароль</label>
-							<input id="data__old-pass" type="password" placeholder="Ваше имя">
-						</div>
-						<div class="data__form_line">
-							<label for="data__new-pass">Новый пароль</label>
-							<input id="data__new-pass" type="password" placeholder="Ваш телефон">
-						</div>
-						<div class="data__form_line">
-							<label for="data__repeat-pass">Повторите пароль</label>
-							<input id="data__repeat-pass" type="password" placeholder="Ваш Email">
-						</div>
-						<div class="data__form_btn">
-							<button class="btn">сохранить</button>
-						</div>
+					<div class="data__form_line">
+						<input id="data__name" type="text" placeholder="Ваше имя" required>
+					</div>
+					<div class="data__form_line">
+						<input id="data__pass" type="password" placeholder="Пароль" required>
+					</div>
+					<div class="data__form_line">
+						<input id="data__repeat-pass" type="password" placeholder="Повторите пароль" required>
+					</div>
+					<div class="register__form_checkbox">
+						<input id="register__checkbox" type="checkbox" checked required>
+						<label for="register__checkbox">
+							Я ознакомлен(на) и согласен(на) с условиями использования и обработкой моих персональных даных
+						</label>
+					</div>
+					<div class="register__form_btn">
+						<button class="btn">регистрация</button>
+					</div>
+					<div class="register__form_link">
+						<a href="#">Я зарегистрирован (а)</a>
 					</div>
 				</form>
-
-				<div class="course tabs__wrap">
-					<div class="course__list">
-
-						<div class="course__item">
-							<div class="course__wrap online__slide_wrap--blue">
-								<img src="img/icon/online__slide1.svg" alt="">
-								<h3>Lorem ipsum dolor <br>sit amet</h3>
-							</div>
-						</div>
-
-						<div class="course__item">
-							<div class="course__wrap online__slide_wrap--red">
-								<img src="img/icon/online__slide3.svg" alt="">
-								<h3>Lorem ipsum dolor <br>sit amet</h3>
-							</div>
-						</div>
-
-						<div class="course__item">
-							<div class="course__wrap online__slide_wrap--green">
-								<img src="img/icon/online__slide4.svg" alt="">
-								<h3>Lorem ipsum dolor <br>sit amet</h3>
-							</div>
-						</div>
-
-						<div class="course__item">
-							<div class="course__wrap online__slide_wrap--blue">
-								<img src="img/icon/online__slide2.svg" alt="">
-								<h3>Lorem ipsum dolor <br>sit amet</h3>
-							</div>
-						</div>
-
-					</div>
-				</div>
 
 			</div>
 		</section>
