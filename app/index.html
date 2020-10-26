@@ -10,6 +10,7 @@
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/preview.jpg">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
 	<script src="js/app.min.js" defer></script>
 
 </head>
@@ -27,7 +28,7 @@
 				<ul class="header__nav_list">
 					<li><a href="#">Обо мне</a></li>
 					<li><a href="#">Мои продукты</a></li>
-					<li><a href="#">Youtube</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
 					<li><a href="#">Отзывы</a></li>
 				</ul>
 
@@ -407,11 +408,132 @@
 			</div>
 		</section>
 
+		<section class="work tabs">
+			<div class="container">
+
+				<div class="work__header">
+					<h2>work in <span>progress</span></h2>
+					<ul class="tabs__list">
+						<li class="tabs__item">“до/после”</li>
+						<li class="tabs__item">Клиенты говорят</li>
+					</ul>
+				</div>
+
+				<div class="work__slider tabs__wrap">
+					<div class="swiper-wrapper">
+						<a href="img/work__slide1.png" class="work__slide swiper-slide" data-fancybox="work__slide">
+							<img src="img/work__slide1.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide2.png" class="work__slide swiper-slide" data-fancybox="work__slide">
+							<img src="img/work__slide2.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide3.png" class="work__slide swiper-slide" data-fancybox="work__slide">
+							<img src="img/work__slide3.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide4.png" class="work__slide swiper-slide" data-fancybox="work__slide">
+							<img src="img/work__slide4.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide5.png" class="work__slide swiper-slide" data-fancybox="work__slide">
+							<img src="img/work__slide5.png" alt="">
+							<span></span>
+						</a>
+					</div>
+					<div class="work__pagination"></div>
+				</div>
+
+				<div class="work__slider tabs__wrap">
+					<div class="swiper-wrapper">
+						<a href="img/work__slide11.png" class="work__slide swiper-slide" data-fancybox="work__gallery">
+							<img src="img/work__slide11.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide12.png" class="work__slide swiper-slide" data-fancybox="work__gallery">
+							<img src="img/work__slide12.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide13.png" class="work__slide swiper-slide" data-fancybox="work__gallery">
+							<img src="img/work__slide13.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide14.png" class="work__slide swiper-slide" data-fancybox="work__gallery">
+							<img src="img/work__slide14.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide15.png" class="work__slide swiper-slide" data-fancybox="work__gallery">
+							<img src="img/work__slide15.png" alt="">
+							<span></span>
+						</a>
+						<a href="img/work__slide16.png" class="work__slide swiper-slide" data-fancybox="work__gallery">
+							<img src="img/work__slide16.png" alt="">
+							<span></span>
+						</a>
+					</div>
+					<div class="work__pagination slider__pagination"></div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="my-youtube">
+			<div class="my-youtube__container container">
+
+				<div class="my-youtube__content">
+					<h2>Мой <span>You</span>Tube канал</h2>
+					<p>
+						Привет! Меня зовут Лана и в этом ролике мы разберемся, чем же заменить
+						вредные сладости, если нет времени на готовку <br> пп-вкусняшек?
+					</p>
+
+					<a href="#" class="btn btn--white" target="_blank">перейти на канал</a>
+				</div>
+
+				<a href="https://www.youtube.com/watch?v=sqnsW2HrHI0" class="my-youtube__video" data-fancybox>
+					<img src="img/my-youtube.png" alt="">
+					<span></span>
+				</a>
+
+			</div>
+		</section>
+
 	</mail>
 
 
 	<footer class="footer">
-		<div class="footer__container container"></div>
+		<div class="footer__container container">
+
+			<div class="footer__col">
+				<ul class="footer__nav">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<a href="#" class="footer__logo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<ul class="footer__soc">
+					<li><a href="#" target="_blank"><img src="img/icon/youtube-symbol--white.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/vk--white.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/instagram--white.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/gmail--white.svg" alt=""></a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<ul class="footer__login">
+					<li><a href="#">Авторизация</a></li>
+					<li><a href="#">Политика конфиденциальности</a></li>
+				</ul>
+			</div>
+
+		</div>
 	</footer>
 
 	<div class="modal modal--services">

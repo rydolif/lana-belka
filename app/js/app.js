@@ -2,6 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
+	$.fancybox.defaults.backFocus = false;
+
 	const form = document.getElementById('form');
 	form.addEventListener('submit', formSend);
 
@@ -127,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var mySwiper = new Swiper('.online__slider', {
 			loop: true,
 			slidesPerView: 1,
-			spaceBetween: 30,
+			spaceBetween: 15,
 			navigation: {
 				nextEl: '.online__next',
 				prevEl: '.online__prev',
@@ -135,11 +137,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			breakpoints: {
 				480: {
 					slidesPerView: 1,
-					spaceBetween: 30
+					spaceBetween: 15
 				},
 				992: {
 					slidesPerView: 2,
-					spaceBetween: 30
+					spaceBetween: 15
 				},
 				1440: {
 					slidesPerView: 3,
@@ -148,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		});
 
-	//----------------------SLIDER-hero----------------------
+	//----------------------SLIDER-info----------------------
 		var mySwiper = new Swiper('.info__slider', {
 			loop: true,
 			slidesPerView: 1,
@@ -163,6 +165,32 @@ document.addEventListener("DOMContentLoaded", function() {
 				type: 'bullets',
 				clickable: true,
 			},
+		});
+
+	//----------------------SLIDER-work----------------------
+		var mySwiper = new Swiper('.work__slider', {
+			loop: true,
+			slidesPerView: 2,
+			spaceBetween: 15,
+			pagination: {
+				el: '.work__pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 15
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 15
+				},
+				1440: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				}
+			}
 		});
 
 	//----------------------MODAL-----------------------
@@ -252,7 +280,47 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 		};
 		// headerFixed('.header', '.header--active');
-	
+
+	//----------------------FIXED-tabs-----------------------
+		const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+			const header = document.querySelector(headerSelector),
+						tab = document.querySelectorAll(tabSelector),
+						content = document.querySelectorAll(contentSelector);
+		
+			function hideTabContent() {
+				content.forEach(item => {
+					item.style.display = "none";
+				});
+		
+				tab.forEach(item => {
+					item.classList.remove(activeClass);
+				});
+			}
+		
+			function showTabContent(i = 0) {
+				content[i].style.display = "block";
+				tab[i].classList.add(activeClass);
+			}
+		
+			hideTabContent();
+			showTabContent();
+		
+			header.addEventListener('click', (e) => {
+				const target = e.target;
+				if (target && 
+					(target.classList.contains(tabSelector.replace(/\./, '')) || 
+					target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
+					tab.forEach((item, i) => {
+						if (target == item || target.parentNode == item) {
+							hideTabContent();
+							showTabContent(i);
+						}
+					});
+				}
+			});
+		};
+		tabs('.tabs', '.tabs__item', '.tabs__wrap', 'active');
+
 	//----------------------HAMBURGER-----------------------
 		const hamburger = (hamburgerButton, hamburgerNav, hamburgerHeader) => {
 			const button = document.querySelector(hamburgerButton),
