@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Мои курсы</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container">
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.png" alt="">
+			</a>
+
+			<nav class="header__nav">
+				<ul class="header__nav_list">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+
+				<div class="header__nav_login">
+					<p>Личный кабинет</p>
+					<ul>
+						<li><a href="#">Вход</a></li>
+						<li><a href="#">Регистрация</a></li>
+					</ul>
+				</div>
+
+				<ul class="header__nav_soc">
+					<li><a href="#" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+
+			</nav>
+
+			<nav class="header__soc">
+				<ul>
+					<li><a href="#" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+			</nav>
+
+			<div class="header__login">
+				<p>Личный кабинет</p>
+				<ul>
+					<li><a href="#">Вход</a></li>
+					<li><a href="#">Регистрация</a></li>
+				</ul>
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="work tabs">
+			<div class="container">
+
+				<div class="work__header work__header--course">
+					<ul class="tabs__list">
+						<li class="tabs__item">мои данные</li>
+						<li class="tabs__item">мои курсы</li>
+					</ul>
+				</div>
+
+				<form class="data tabs__wrap">
+					<div class="data__form">
+						<h3>Мои данные</h3>
+						<div class="data__form_line">
+							<label for="data__name">Ваше имя</label>
+							<input id="data__name" type="text" placeholder="Ваше имя">
+						</div>
+						<div class="data__form_line">
+							<label for="data__phone">Ваш телефон</label>
+							<input id="data__phone" type="tel" placeholder="Ваш телефон">
+						</div>
+						<div class="data__form_line">
+							<label for="data__mail">Ваш Email</label>
+							<input id="data__mail" type="email" placeholder="Ваш Email">
+						</div>
+					</div>
+					<div class="data__form">
+						<h3>Сменить пароль</h3>
+						<div class="data__form_line">
+							<label for="data__old-pass">Старый пароль</label>
+							<input id="data__old-pass" type="password" placeholder="Ваше имя">
+						</div>
+						<div class="data__form_line">
+							<label for="data__new-pass">Новый пароль</label>
+							<input id="data__new-pass" type="password" placeholder="Ваш телефон">
+						</div>
+						<div class="data__form_line">
+							<label for="data__repeat-pass">Повторите пароль</label>
+							<input id="data__repeat-pass" type="password" placeholder="Ваш Email">
+						</div>
+						<div class="data__form_btn">
+							<button class="btn">сохранить</button>
+						</div>
+					</div>
+				</form>
+
+				<div class="course tabs__wrap">
+					<div class="course__list">
+
+						<div class="course__item">
+							<div class="course__wrap online__slide_wrap--blue">
+								<img src="img/icon/online__slide1.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+						<div class="course__item">
+							<div class="course__wrap online__slide_wrap--red">
+								<img src="img/icon/online__slide3.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+						<div class="course__item">
+							<div class="course__wrap online__slide_wrap--green">
+								<img src="img/icon/online__slide4.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+						<div class="course__item">
+							<div class="course__wrap online__slide_wrap--blue">
+								<img src="img/icon/online__slide2.svg" alt="">
+								<h3>Lorem ipsum dolor <br>sit amet</h3>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
+	</main>
+
+
+	<footer class="footer">
+		<div class="footer__container container">
+
+			<div class="footer__col">
+				<ul class="footer__nav">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<a href="#" class="footer__logo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<ul class="footer__soc">
+					<li><a href="#" target="_blank"><img src="img/icon/youtube-symbol--white.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/vk--white.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/instagram--white.svg" alt=""></a></li>
+					<li><a href="#" target="_blank"><img src="img/icon/gmail--white.svg" alt=""></a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<ul class="footer__login">
+					<li><a href="#">Авторизация</a></li>
+					<li><a href="#">Политика конфиденциальности</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+
+</body>
+</html>
