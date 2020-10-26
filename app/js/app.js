@@ -123,6 +123,48 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 		});
 
+	//----------------------SLIDER-online----------------------
+		var mySwiper = new Swiper('.online__slider', {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			navigation: {
+				nextEl: '.online__next',
+				prevEl: '.online__prev',
+			},
+			breakpoints: {
+				480: {
+					slidesPerView: 1,
+					spaceBetween: 30
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 30
+				},
+				1440: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				}
+			}
+		});
+
+	//----------------------SLIDER-hero----------------------
+		var mySwiper = new Swiper('.info__slider', {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			effect: 'fade',
+			navigation: {
+				nextEl: '.info__next',
+				prevEl: '.info__prev',
+			},
+			pagination: {
+				el: '.info__pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+
 	//----------------------MODAL-----------------------
 		const modals = (triggerSelector, modalSelector, closeSelector) => {
 			const trigger = document.querySelectorAll(triggerSelector),
