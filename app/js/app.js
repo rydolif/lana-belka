@@ -112,17 +112,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	//----------------------SLIDER-hero----------------------
-		// var mySwiper = new Swiper('.hero__slider', {
-		// 	loop: true,
-		// 	pagination: {
-		// 		el: '.hero__pagination',
-		// 		clickable: 'true',
-		// 	},
-		// 	navigation: {
-		// 		nextEl: '.hero__next',
-		// 		prevEl: '.hero__prev',
-		// 	},
-		// });
+		var mySwiper = new Swiper('.hero__slider', {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			effect: 'fade',
+			navigation: {
+				nextEl: '.hero__next',
+				prevEl: '.hero__prev',
+			},
+		});
 
 	//----------------------MODAL-----------------------
 		const modals = (triggerSelector, modalSelector, closeSelector) => {
@@ -225,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 	
 		};
-		// hamburger('.hamburger', '.header__nav', '.header');
+		hamburger('.hamburger', '.header__nav', '.header');
 	
 	
 	});

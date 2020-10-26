@@ -1,14 +1,16 @@
 
 //----------------------fonts---------------------
-$fonts: 'Roboto', sans-serif
+$fonts: 'HelveticaNeueCyr', sans-serif
+$title: 'Oswald', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
-$accent: #4cddee
-$text: #353535
+$accent: #e5668a
+$text: #36383b
 $dark: #1e53a6
-$title: #f43ddb
-
+$btn: #4aafaf
+$gray: #dedede
+$bg: #bcbfde
 //---------------------end-color---------------------
 
 body
@@ -30,13 +32,15 @@ body
 	color: #fff
 
 ::placeholder
-	color: #666
+	color: $text
 	
 h1, h2, h3, h4, h5, h6
 	font-weight: 700
 	line-height: 1.2
 	margin: 0
 	padding: 0
+	font-family: $title
+	text-transform: uppercase
 
 ul
 	margin: 0
@@ -51,12 +55,14 @@ p
 	padding: 0
 
 a,
-button,
+button
+	color: $text
+	+transition
+
 	&:focus,
 	&:hover,
 		outline: none
 		text-decoration: none
-		transition: all .6s
 		border: none
 		outline: none
 
