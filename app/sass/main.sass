@@ -1747,10 +1747,7 @@
 
 
 .course
-	padding: 40px 0
-
-	+r(992)
-		padding: 30px 0
+	padding: 20px 0 40px
 
 	h2
 		display: block
@@ -1862,10 +1859,8 @@
 
 
 .crumbs
-	display: flex
-	flex-wrap: wrap
-	color: #bec5ce
-	margin-bottom: 50px
+	margin-top: 20px
+	margin-bottom: 30px
 
 	+r(1200)
 		margin-bottom: 40px
@@ -1875,12 +1870,18 @@
 
 	span
 		margin: 0 3px
+		color: #bec5ce
 
 	a
 		color: #bec5ce
 
 		&:hover
 			color: $accent
+
+	&__container
+		display: flex
+		flex-wrap: wrap
+		color: #bec5ce
 
 
 .action
@@ -2461,6 +2462,169 @@
 
 			+r(1440)
 				width: 80px
+
+
+.cart
+
+	h2
+		margin-bottom: 35px
+
+		+r(1200)
+			margin-bottom: 25px
+
+		+r(992)
+			margin-bottom: 15px
+			text-align: center
+
+	h3
+		margin-bottom: 15px
+
+		+r(992)
+			text-align: center
+
+	&__info
+		width: 42%
+
+		+r(1440)
+			width: 48%
+		
+		+r(992)
+			width: 100%
+
+		label
+			padding-left: 30px
+
+			&::before
+				background-color: transparent
+				border-color: #cbcbd0
+				+transition
+
+		input[type="checkbox"]:checked + label:before
+			background-color: $accent
+			border-color: $accent
+		
+		&_check
+			@extend .register__form_checkbox
+			margin: 0 0 40px
+
+	&__description
+		width: 42%
+
+		+r(1440)
+			width: 48%
+		
+		+r(992)
+			width: 100%
+
+		h3
+			text-align: center
+			margin-bottom: 25px
+
+			+r(992)
+				margin-bottom: 15px
+
+		&_stat
+			display: flex
+			align-items: center
+			margin-bottom: 45px
+
+			+r(1200)
+				margin-bottom: 25px
+
+			+r(992)
+				margin-bottom: 20px
+
+			p
+				margin-right: 30px
+				margin-bottom: 0
+
+		&_info
+			position: relative
+			flex-shrink: 0
+			width: 70%
+			height: 15px
+			border-radius: 25px
+			background-color: #e8e9ee
+
+			span
+				position: absolute
+				left: 0
+				top: 0
+				height: 15px
+				border-radius: 25px
+				background-color: $accent
+				width: 20%
+
+			b
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+
+		&_subtitle
+			text-align: center
+			margin-bottom: 45px
+
+			+r(1200)
+				margin-bottom: 25px
+
+			+r(992)
+				margin-bottom: 20px
+
+		&_week
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 25px
+
+			+r(480)
+				flex-wrap: wrap
+
+			&:last-child
+				margin-bottom: 0
+
+			p
+				margin-bottom: 0
+				width: 20%
+
+				+r(480)
+					width: 100%
+
+			label
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: #e8e9ee
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				border: 2px solid transparent
+				margin-bottom: 0
+				flex-shrink: 0
+				cursor: pointer
+				margin: 0 3px
+				+transition
+
+				+r(480)
+					width: 30px
+					height: 30px
+
+
+				&:hover
+					border-color: $accent
+
+				&:active
+					box-shadow: 0 0 10px 0 rgba($accent, 1)
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label
+				background-color: $accent
+				border-color: $accent
+				color: #fff
+
+
 
 
 
