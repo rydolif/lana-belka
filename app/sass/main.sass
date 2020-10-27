@@ -33,7 +33,7 @@
 	border-radius: 50px
 	max-width: fit-content
 	background-color: $btn
-	padding: 0 50px
+	padding: 0 20px
 	font-weight: 700
 	color: #ffffff
 	text-transform: uppercase
@@ -719,25 +719,47 @@
 				margin-bottom: 20px
 
 	&__slide
-		&:hover
 
+		&:hover
 			.online__slide_info
 				opacity: 1
 
-			.online__slide_wrap
+			.online__slide_wrap,
+			.online__slide_img
 				opacity: 0
 
 		&_info
+			position: absolute
+			left: 50%
+			top: 50%
+			display: block
+			width: 100%
+			transform: translate(-50%, -50%)
 			padding: 0 25px
 			opacity: 0
 			+transition
+
+			+r(992)
+				padding: 0 10px
+			
+			+r(480)
+				position: relative
+				top: 0
+				left: 0
+				transform: translate(0, 0)
 
 			h3
 				text-align: center
 				margin-bottom: 10px
 
+				+r(992)
+					margin-bottom: 5px
+
 			ul
 				margin-bottom: 20px
+
+				+r(992)
+					margin-bottom: 10px
 
 			li
 				line-height: 1.2
@@ -759,6 +781,9 @@
 				line-height: 1
 				margin-bottom: 30px
 
+				+r(992)
+					margin-bottom: 10px
+
 				div
 					padding: 0 15px
 
@@ -776,6 +801,18 @@
 					font-weight: 700
 					font-style: italic
 					text-transform: uppercase
+
+		&_img
+			width: 100%
+			overflow: hidden
+			+transition
+
+			+r(480)
+				display: none
+
+			img
+				width: 100%
+				border-radius: 20px
 
 		&_wrap
 			position: absolute
@@ -825,11 +862,12 @@
 		+r(992)
 			.online__slide_info
 				opacity: 1
-				transition: all 2s
+				transition: all 1s
 
-			.online__slide_wrap
+			.online__slide_wrap,
+			.online__slide_img
 				opacity: 0
-				transition: all 2s
+				transition: all 1s
 
 
 .info
