@@ -475,6 +475,12 @@
 		+r(1600)
 			max-width: 1440px
 
+		+r(1440)
+			max-width: 1350px
+		
+		+r(1350)
+			max-width: 1200px
+
 	&__slider
 		position: relative
 
@@ -737,6 +743,7 @@
 			transform: translate(-50%, -50%)
 			padding: 0 25px
 			opacity: 0
+			z-index: 1
 			+transition
 
 			+r(992)
@@ -851,6 +858,9 @@
 
 			&--green
 				background-color: $btn
+
+		.btn
+			margin: 0 auto
 
 	.swiper-container
 		overflow: visible
@@ -1189,11 +1199,8 @@
 		padding-bottom: 80px
 
 		+r(1440)
-			padding-bottom: 50px
-		
-		+r(767)
-			padding-bottom: 30px
-		
+			padding-bottom: 60px
+
 		img
 			border-radius: 25px
 
@@ -1268,6 +1275,7 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		flex-wrap: wrap
 
 		span
 			display: block
@@ -1277,6 +1285,7 @@
 			background-color: #bec5ce
 			margin: 0 5px
 			transform: scale(.6)
+			flex-shrink: 0
 			+transition
 
 		.swiper-pagination-bullet-active
@@ -1769,12 +1778,14 @@
 
 	h3
 		text-align: center
-		margin-bottom: 40px
+		margin-bottom: 5px
+
+	&__subtitle
+		text-align: center
+		font-weight: 700
+		margin-bottom: 30px
 
 		+r(1200)
-			margin-bottom: 30px
-
-		+r(992)
 			margin-bottom: 20px
 
 	input
@@ -2467,6 +2478,7 @@
 			font-size: 14px
 
 	&__item
+		position: relative
 		width: 33%
 
 		+r(767)
@@ -2482,24 +2494,16 @@
 		display: flex
 		justify-content: center
 		align-items: flex-end
-		padding: 65% 20px 50px
 		border-radius: 25px
 		text-align: center
 		color: #fff
 		height: 100%
-
-		+r(1440)
-			padding: 50% 10px 20px
+		+cover
 
 		img
-			width: 100px
-			position: absolute
-			top: 30%
-			left: 50%
-			transform: translate(-50%, -50%)
-
-			+r(1440)
-				width: 80px
+			width: 100%
+			border-radius: 24px
+			+transition
 
 
 .cart
