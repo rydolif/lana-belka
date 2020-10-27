@@ -39,6 +39,7 @@
 	text-transform: uppercase
 	letter-spacing: 1px
 	border: 0
+	min-width: 200px
 
 	&:hover,
 	&:focus
@@ -1693,11 +1694,31 @@
 			display: flex
 			justify-content: center
 
+			+r(1200)
+				margin-bottom: 15px
+
+			&-two
+				display: flex
+				justify-content: space-between
+
+				+r(480)
+					text-align: center
+					justify-content: center
+					flex-direction: column
+
 			a
 				text-decoration: underline
 
-			+r(1200)
-				margin-bottom: 15px
+				+r(480)
+					margin-bottom: 10px
+
+				&:hover
+					color: $accent
+
+				&:last-child
+					margin-bottom: 0
+
+
 
 	h3
 		text-align: center
@@ -1829,6 +1850,7 @@
 
 		img
 			width: 100%
+
 
 .crumbs
 	display: flex
