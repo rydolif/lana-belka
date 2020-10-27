@@ -1252,6 +1252,10 @@
 	+r(1200)
 		padding: 30px 0
 
+	br
+		+r(767)
+			display: none
+
 	&__container
 		+between
 		align-items: flex-start
@@ -1945,7 +1949,6 @@
 			align-items: flex-start
 			text-align: center
 			color: $accent
-			margin-bottom: 10px
 			max-width: fit-content
 
 			+r(767)
@@ -2013,6 +2016,30 @@
 				font-size: 16px
 				font-weight: 700
 
+		&_bonus
+			display: flex
+			align-items: center
+			font-size: 20px
+			text-transform: uppercase
+			font-weight: 800
+
+			+r(1200)
+				font-size: 18px
+			
+			+r(992)
+				font-size: 16px
+			
+			+r(767)
+				font-size: 14px
+
+			img
+				margin-right: 15px
+			
+			p
+				margin-bottom: 0
+
+			b
+				color: $accent
 
 .trainer
 	padding: 80px 0
