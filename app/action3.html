@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.svg">
 	<meta property="og:image" content="img/preview.jpg">
-	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="css/app.min.css?v=2">
 	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
 	<script src="js/app.min.js" defer></script>
 
@@ -635,16 +635,22 @@
 			</div>
 		</section>
 
-		<section class="interest">
+		<section class="interest online">
 			<div class="container">
 
-				<h2>тебя также заинтересуют:</h2>
+				<div class="online__header">
+					<h2>тебя также заинтересуют:</h2>
+					<div class="interest__button slider__button">
+						<div class="interest__prev slider__prev"></div>
+						<div class="interest__next slider__next"></div>
+					</div>
+				</div>
 
-				<div class="profile">
-					<div class="interest__list profile__list">
+				<div class="interest__slider swiper-container">
+					<div class="swiper-wrapper">
 
-						<div class="interest__item profile__item online__slide">
-							<div class="interest__item_info online__slide_info">
+						<div class="online__slide swiper-slide">
+							<div class="online__slide_info">
 								<h3>ОНЛАЙН-КУРС тренировок <br> для начинающиз «ХОЧУ ФИТНЕС»</h3>
 								<div class="online__slide_info--block">
 									<div>
@@ -675,8 +681,8 @@
 							</div>
 						</div>
 
-						<div class="interest__item profile__item online__slide">
-							<div class="interest__item_info online__slide_info">
+						<div class="online__slide swiper-slide">
+							<div class="online__slide_info">
 								<h3>ОНЛАЙН-КУРС тренировок <br> для начинающиз «ХОЧУ ФИТНЕС»</h3>
 								<div class="online__slide_info--block">
 									<div>
@@ -693,11 +699,6 @@
 								<ul>
 									<li><b>12 тренировок</b> длительностью от 30 до 60 минут</li>
 									<li>Работа со своим весом, <b>снаряжение не требуется.</b></li>
-									<li>Занимайся <b>в любое удобное время в любом месте,</b></li>
-									<li><b>Подробное объяснение техники</b> выполнения всех базовых упражнений</li>
-									<li>Работа над <b>правильным дыханием</b> во время занятий.</li>
-									<li>Формирование взаимосвязи «Мозг-мышцы»</li>
-									<li><b>Плавное увеличение нагрузки</b></li>
 									<li><b>Потеря лишних килограмм</b> и формирование рельефа</li>
 								</ul>
 								<a href="#" class="btn btn--white">Подробнее</a>
@@ -707,8 +708,8 @@
 							</div>
 						</div>
 
-						<div class="interest__item profile__item online__slide">
-							<div class="interest__item_info online__slide_info">
+						<div class="online__slide swiper-slide">
+							<div class="online__slide_info">
 								<h3>ОНЛАЙН-КУРС тренировок <br> для начинающиз «ХОЧУ ФИТНЕС»</h3>
 								<div class="online__slide_info--block">
 									<div>
