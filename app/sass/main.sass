@@ -40,6 +40,8 @@
 	letter-spacing: 1px
 	border: 0
 	min-width: 200px
+	cursor: pointer
+	+transition
 
 	&:hover,
 	&:focus
@@ -2748,6 +2750,30 @@
 
 	&__nav
 
+		&_wrap
+			box-shadow: 0 0 10px 0 rgba(#000, .3)
+			border-radius: 20px
+			padding: 20px
+			margin-bottom: 20px
+
+			.admin__nav_item
+				box-shadow: 0 0 0px 0 rgba(#000, .3)
+				border-bottom: 1px solid rgba(#000, .3)
+				border-radius: 0
+				padding: 5px
+				margin-bottom: 10px
+
+				&:last-child
+					border: 0
+
+		&_header
+			margin-bottom: 15px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 5px
+			border-bottom: 2px solid rgba(#000, .3)
+
 		&_item
 			display: flex
 			justify-content: space-between
@@ -2791,7 +2817,6 @@
 		&_title
 			width: 70%
 			text-align: left
-			margin-right: 15px
 
 			+r(576)
 				width: 100%
@@ -2802,6 +2827,10 @@
 		&_button
 			flex-shrink: 0
 			display: flex
+			margin-left: 15px
+
+			+r(576)
+				margin-left: 0
 
 			a
 				display: flex
@@ -2813,6 +2842,10 @@
 				background-color: #fff
 				box-shadow: 0 0 10px 0 rgba(#000, .3)
 				margin-right: 10px
+
+				+r(992)
+					width: 30px
+					height: 30px
 
 				&:hover
 					box-shadow: 0 0 10px 0 rgba(#000, .5)
@@ -2873,8 +2906,258 @@
 	&__info
 
 
+// -----MODAL-----
+.modal
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	min-width: 100vw
+	min-height: 100vh
+	padding: 30px
+	z-index: 10000
+	background-color: rgba(#1a1a1d, .7)
+	overflow: auto
+	padding: 40px 0
 
+	&--open
+		position: relative
+		overflow: hidden
 
+	&__close
+		position: absolute
+		right: -35px
+		top: -35px
+		display: block
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		border: none
+		cursor: pointer
+		transition: all .6s
+		background-color: #fff
+
+		+r(576)
+			width: 30px
+			height: 30px
+			top: -15px
+			right: -15px
+			box-shadow: 0 0 15px 0 rgba(#000, .7)
+
+		&:hover,
+		&:focus
+			outline: none
+			transform: rotate(90deg)
+
+			span
+				background: red
+
+		span
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: #273a72
+			transition: all .6s
+			border-radius: 4px
+			height: 22px
+			width: 3px
+
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)
+
+	&__form
+		z-index: 1
+		background-color: #fff
+		box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+		border-radius: 20px
+		width: 100%
+		max-width: 860px
+		height: auto
+		padding: 40px
+		border: 1px solid #8d8d8e
+		margin: auto
+
+		+r(992)
+			max-width: 90vw
+			padding: 40px
+
+	h3
+		margin-bottom: 20px
+
+	&__line
+		margin-bottom: 20px
+
+.form
+	display: block
+	position: relative
+	+pseudo
+
+	&::after
+		width: 100%
+		height: 100%
+		background-color: rgba(#fff, .7)
+		background-image: url(../img/loading.gif)
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 120px
+		visibility: hidden
+		opacity: 0
+		z-index: 100
+		+transition
+
+	&._sending
+
+		&::after
+			opacity: 1
+			visibility: visible
+
+	&__item
+		margin-bottom: 15px
+
+	&__label
+		font-size: 16px
+		font-weight: 500
+		margin-bottom: 5px
+
+	&__input
+		width: 100%
+		height: 40px
+		line-height: 40px
+		padding: 0 15px
+
+		&::placeholder
+			line-height: 40px
+			font-size: 16px
+
+		&:focus
+			box-shadow: 0 0 4px 0 rgba($text, 1)
+
+		&._error
+			box-shadow: 0 0 4px 0 rgba(red, 1)
+			border-color: red
+	
+	&__textarea
+		width: 100%
+		resize: none
+		min-height: 120px
+		padding: 15px
+
+	&__options
+
+		&_label
+			position: relative
+			display: inline-flex
+			font-size: 16px
+			line-height: 140%
+			align-items: center
+
+			&::before
+				content: ''
+				align-self: start
+				flex: 0 0 24px
+				height: 24px
+				background-color: $btn
+				border-radius: 50%
+				margin-right: 10px
+
+			&::after
+				content: ''
+				position: absolute
+				top: 4px
+				left: 4px
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				background-color: #fff
+				transform: scale(0)
+				+transition
+
+		&_input
+			display: none
+
+			&:checked + .form__options_label::after
+				transform: scale(1)
+
+	&__select
+		height: 50px
+		width: 100%
+		border-radius: 5px
+		font-size: 16px
+		padding: 0 15px
+
+	&__file
+
+		&_item
+			position: relative
+			margin-bottom: 10px
+
+		&_input
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			font-size: 0
+
+		&_preview
+			display: inline-block
+			max-width: 100px
+
+			img
+				max-width: 100%
+
+	&__checkbox
+		&._error
+			.form__checkbox_label::before
+				box-shadow: 0 0 7px 0 rgba(red, 1)
+
+		&_label
+			position: relative
+			width: 100%
+			font-size: 16px
+			line-height: 140%
+			display: inline-flex
+			align-items: center
+			cursor: pointer
+
+			&::before
+				content: ''
+				align-self: flex-start
+				flex: 0 0 24px
+				height: 24px
+				background-color: $btn
+				border-radius: 4px
+				margin-right: 10px
+				+transition
+
+			&::after
+				content: ''
+				width: 16px
+				height: 16px
+				position: absolute
+				top: 4px
+				left: 4px
+				background-color: #fff
+				transform: scale(0)
+				+transition
+
+			a
+				color: $text
+
+		&_input
+			display: none
+
+			&:checked + .form__checkbox_label::after
+				transform: scale(1)
+
+	&__btn
 
 
 

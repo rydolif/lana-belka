@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Редактор страницы</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.svg">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container">
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.png" alt="">
+			</a>
+
+			<nav class="header__nav">
+				<ul class="header__nav_list">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+
+				<div class="header__nav_login">
+					<p>Личный кабинет</p>
+					<ul>
+						<li><a href="#">Вход</a></li>
+						<li><a href="#">Регистрация</a></li>
+					</ul>
+				</div>
+
+				<ul class="header__nav_soc">
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+
+			</nav>
+
+			<nav class="header__soc">
+				<ul>
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+			</nav>
+
+			<div class="header__login">
+				<p>Личный кабинет</p>
+				<ul>
+					<li><a href="#">Вход</a></li>
+					<li><a href="#">Регистрация</a></li>
+				</ul>
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="admin">
+			<div class="admin__container container">
+
+				<h2>Редактировать главную страницу</h2>
+
+				<nav class="admin__nav">
+
+					<div class="admin__nav_wrap">
+						<div class="admin__nav_header">
+							<h3>Главный слайдер</h3>
+							<div class="admin__nav_button">
+								<a href="#" class="modal__edits" title="Добавить слайд">
+									<img src="img/icon/playlist.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+
+						<div class="admin__nav_item">
+							<div class="admin__nav_title">
+								<h3>Первый слайд</h3>
+							</div>
+							<div class="admin__nav_button">
+								<a href="#" class="modal__add" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+	
+						<div class="admin__nav_item">
+							<div class="admin__nav_title">
+								<h3>Второй слайд</h3>
+							</div>
+							<div class="admin__nav_button">
+								<a href="#" class="modal__next" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+	
+						<div class="admin__nav_item">
+							<div class="admin__nav_title">
+								<h3>Третий слайд</h3>
+							</div>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="admin__nav_header">
+							<h3>ОНЛАЙН-КУРСЫ И ГАЙДЫ</h3>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Добавить слайд">
+									<img src="img/icon/playlist.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+	
+						<div class="admin__nav_item">
+							<div class="admin__nav_title">
+								<h3>Первый слайд</h3>
+							</div>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+	
+						<div class="admin__nav_item">
+							<div class="admin__nav_title">
+								<h3>Второй слайд</h3>
+							</div>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+	
+						<div class="admin__nav_item">
+							<div class="admin__nav_title">
+								<h3>Третий слайд</h3>
+							</div>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</nav>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container">
+
+			<div class="footer__col">
+				<ul class="footer__nav">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<a href="#" class="footer__logo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<ul class="footer__soc">
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol--white.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk--white.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram--white.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail--white.svg" alt=""></a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<ul class="footer__login">
+					<li><a href="#">Авторизация</a></li>
+					<li><a href="#">Политика конфиденциальности</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+
+	<div class="modal" id="modal__edits">
+		<form action="#" class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+	
+			<h3 class="form__title">Добавить елемент в слайдер</h3>
+
+			<input type="hidden" name="subject" value="Добавить елемент в слайдер">
+
+			<div class="form__item">
+				<label for="formName" class="form__label">Имя*</label>
+				<input id="formName" type="text" name="name" placeholder="Имя" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<label for="formPhone" class="form__label">Телефон*</label>
+				<input id="formPhone" type="tel" name="phone" placeholder="Телефон" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<label for="formMail">Почта*</label>
+				<input id="formMail" type="email" name="mail" placeholder="Почта" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<div class="form__label">Левша или правша?</div>
+				<div class="form__options">
+					<div class="form__options_item">
+						<input id="formRigth" type="radio" value="raight" name="hand" class="form__options_input" checked>
+						<label for="formRigth" class="form__options_label"><span>Правша</span></label>
+					</div>
+					<div class="form__options_item">
+						<input id="formLeft" type="radio" value="left" name="hand" class="form__options_input">
+						<label for="formLeft" class="form__options_label"><span>Левша</span></label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form__item">
+				<label for="formMessage" class="form__label">Сообщение</label>
+				<textarea name="message" id="formMessage" class="form__textarea"></textarea>
+			</div>
+
+			<div class="form__item">
+				<div class="form__label">Возраст:</div>
+				<select name="age" id="formAge" class="form__select">
+					<option value="18" selected="selected">18</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+				</select>
+			</div>
+
+			<div class="form__item">
+				<div class="form__label">Прикрепить фото:</div>
+				<div class="form__file">
+					<div class="form__file_item">
+						<input id="formImage" accept=".jpg, .png, .gif, .ico" type="file" name="image" class="form__file_input">
+						<label for="formImage" class="form__file_button btn">Выбрать</label>
+					</div>
+					<div id="formPreview" class="form__file_preview"></div>
+				</div>
+			</div>
+
+			<div class="form__item">
+				<div class="form__checkbox">
+					<input id="formAgreement" checked type="checkbox" name="agreement" class="form__checkbox_input _req">
+					<label for="formAgreement" class="form__checkbox_label"><span>Персональные данные <a href="#">Файл</a></span></label>
+				</div>
+			</div>
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="modal__add">
+		<form action="#" class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+	
+				<h3 class="form__title">Редактировать елемент 1</h3>
+
+				<input type="hidden" name="subject" value="Редактировать елемент">
+
+				<div class="form__item">
+					<label for="formName2" class="form__label">Имя*</label>
+					<input id="formName2" type="text" name="name" placeholder="Имя" class="form__input _req">
+				</div>
+
+				<div class="form__item">
+					<label for="formPhone2" class="form__label">Телефон*</label>
+					<input id="formPhone2" type="tel" name="phone" placeholder="Телефон" class="form__input _req">
+				</div>
+
+				<div class="form__item">
+					<label for="formMail2">Почта*</label>
+					<input id="formMail2" type="email" name="mail" placeholder="Почта" class="form__input _req">
+				</div> 
+
+				<div class="form__item">
+					<div class="form__label">Левша или правша?</div>
+					<div class="form__options">
+						<div class="form__options_item">
+							<input id="formRigth2" type="radio" value="raight" name="hand" class="form__options_input" checked>
+							<label for="formRigth2" class="form__options_label"><span>Правша</span></label>
+						</div>
+						<div class="form__options_item">
+							<input id="formLeft2" type="radio" value="left" name="hand" class="form__options_input">
+							<label for="formLeft2" class="form__options_label"><span>Левша</span></label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form__item">
+					<label for="formMessage2" class="form__label">Сообщение</label>
+					<textarea id="formMessage2" name="message" class="form__textarea"></textarea>
+				</div>
+
+				<div class="form__item">
+					<div class="form__label">Возраст:</div>
+					<select name="age" id="formAge2" class="form__select">
+						<option value="18" selected="selected">18</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+						<option value="50">50</option>
+					</select>
+				</div>
+
+				<div class="form__item">
+					<div class="form__label">Прикрепить фото:</div>
+					<div class="form__file">
+						<div class="form__file_item">
+							<input id="formImage2" accept=".jpg, .png, .gif, .ico" type="file" name="image" class="form__file_input">
+							<label for="formImage2" class="form__file_button btn">Выбрать</label>
+						</div>
+						<div id="formPreview2" class="form__file_preview"></div>
+					</div>
+				</div>
+
+				<div class="form__item">
+					<div class="form__checkbox">
+						<input id="formAgreement2" checked type="checkbox" name="agreement" class="form__checkbox_input _req">
+						<label for="formAgreement2" class="form__checkbox_label"><span>Персональные данные <a href="#">Файл</a></span></label>
+					</div>
+				</div>
+
+				<div class="form__btn">
+					<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+				</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="modal__next">
+		<form action="#" class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+	
+				<h3 class="form__title">Редактировать елемент 2</h3>
+
+				<input type="hidden" name="subject" value="Редактировать елемент">
+
+				<div class="form__item">
+					<label for="formName3" class="form__label">Имя*</label>
+					<input id="formName3" type="text" name="name" placeholder="Имя" class="form__input _req">
+				</div>
+
+				<div class="form__item">
+					<label for="formPhone3" class="form__label">Телефон*</label>
+					<input id="formPhone3" type="tel" name="phone" placeholder="Телефон" class="form__input _req">
+				</div>
+
+				<div class="form__item">
+					<label for="formMail3">Почта*</label>
+					<input id="formMail3" type="email" name="mail" placeholder="Почта" class="form__input _req">
+				</div> 
+
+				<div class="form__item">
+					<div class="form__label">Левша или правша?</div>
+					<div class="form__options">
+						<div class="form__options_item">
+							<input id="formRigth3" type="radio" value="raight" name="hand" class="form__options_input" checked>
+							<label for="formRigth3" class="form__options_label"><span>Правша</span></label>
+						</div>
+						<div class="form__options_item">
+							<input id="formLeft3" type="radio" value="left" name="hand" class="form__options_input">
+							<label for="formLeft3" class="form__options_label"><span>Левша</span></label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form__item">
+					<label for="formMessage3" class="form__label">Сообщение</label>
+					<textarea id="formMessage3" name="message" class="form__textarea"></textarea>
+				</div>
+
+				<div class="form__item">
+					<div class="form__label">Возраст:</div>
+					<select name="age" id="formAge3" class="form__select">
+						<option value="18" selected="selected">18</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+						<option value="50">50</option>
+					</select>
+				</div>
+
+				<div class="form__item">
+					<div class="form__label">Прикрепить фото:</div>
+					<div class="form__file">
+						<div class="form__file_item">
+							<input id="formImage3" accept=".jpg, .png, .gif, .ico" type="file" name="image" class="form__file_input">
+							<label for="formImage3" class="form__file_button btn">Выбрать</label>
+						</div>
+						<div id="formPreview3" class="form__file_preview"></div>
+					</div>
+				</div>
+
+				<div class="form__item">
+					<div class="form__checkbox">
+						<input id="formAgreement3" checked type="checkbox" name="agreement" class="form__checkbox_input _req">
+						<label for="formAgreement3" class="form__checkbox_label"><span>Персональные данные <a href="#">Файл</a></span></label>
+					</div>
+				</div>
+
+				<div class="form__btn">
+					<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+				</div>
+
+		</form>
+	</div>
+
+</body>
+</html>
