@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
+			autoplay: {
+				delay: 5000,
+			},
 			effect: 'fade',
 			navigation: {
 				nextEl: '.hero__next',
@@ -102,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					slidesPerView: 3,
 					spaceBetween: 15
 				},
-				1440: {
+				1200: {
 					slidesPerView: 4,
 					spaceBetween: 30
 				}
@@ -170,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	//------------------------------acardeon---------------------------
 		$(".block__content").slideUp("slow");
-		// $(".block").first().addClass('active');
 		$(".active .block__content").slideDown("slow");
 
 		$(".block__header").on("click", function(){
@@ -183,6 +185,25 @@ document.addEventListener("DOMContentLoaded", function() {
 				$(".active").removeClass('active');
 				$(this).parent().addClass('active');
 				$(".active .block__content").slideDown("slow");
+			}
+		});
+	
+	//------------------------------more---------------------------
+		$(".action__more").slideUp("slow");
+		$(".more").on("click", function(){
+			event.preventDefault();
+
+			if ($(".action__more").hasClass('action__more--active')) {
+				$(".action__more").slideUp("slow");
+				$(".more").html('ЧИТАТЬ ДАЛЕЕ');
+				$(".action__more--active").removeClass('action__more--active');
+				$(".action__more").addClass('action__more');
+			}
+			else {
+				$(".action__more").slideDown("slow");
+				$(".more").html('Скрыть текст');
+				$(".action__more").addClass('action__more--active');
+				// $(".action__more--active").removeClass('action__more--active');
 			}
 		});
 

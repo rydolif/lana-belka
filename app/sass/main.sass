@@ -738,35 +738,56 @@
 				margin-bottom: 20px
 
 	&__slide
+		overflow: hidden
+		border-radius: 25px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			+transition
 
 		&:hover
+			background-color: #fff
+
+			&::before
+				opacity: 0
+
 			.online__slide_info
 				opacity: 1
 
 			.online__slide_wrap,
 			.online__slide_img
 				opacity: 0
+				z-index: -1
+
+		&--one
+			&::before
+				background-color: #d2abda
+
+		&--two
+			&::before
+				background-color: $bg
+
+		&--three
+			&::before
+				background-color: $bg
+
+		&--four
+			&::before
+				background-color: $bg
 
 		&_info
-			position: absolute
-			left: 50%
-			top: 50%
-			display: block
-			width: 100%
-			transform: translate(-50%, -50%)
-			padding: 0 25px
+			padding: 5px 25px
 			opacity: 0
-			z-index: 1
+			z-index: 2
 			+transition
 
 			+r(992)
 				padding: 0 10px
-			
-			+r(480)
-				position: relative
-				top: 0
-				left: 0
-				transform: translate(0, 0)
 
 			h3
 				text-align: center
@@ -823,16 +844,73 @@
 					text-transform: uppercase
 
 		&_img
-			width: 100%
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 95%
+			max-height: 100%
+			height: 100%
 			overflow: hidden
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			border-radius: 20px
+			text-align: center
+			z-index: 1
 			+transition
 
-			+r(480)
+			.btn
 				display: none
 
+				+r(992)
+					display: flex
+
+			h3
+				color: #fff
+				font-weight: 600
+				margin-bottom: 5px
+
+			h4
+				font-size: 1.8em
+				margin-bottom: 8px
+
+				+r(992)
+					font-size: 1.6em
+
+				+r(480)
+					font-size: 1.4em
+
 			img
-				width: 100%
-				border-radius: 20px
+				width: 70%
+				max-width: 280px
+				margin-bottom: 15px
+
+			&--one
+				h4
+					color: #799adf
+
+			&--two
+				h4
+					color: #e4668b
+
+			&--three
+				h4
+					color: #e4668b
+
+				&_secret
+					position: absolute
+					top: 20px
+					left: 20px
+					width: 120px !important
+
+					+r(576)
+						width: 100px !important
+			
+			&--four
+				h4
+					color: #e4668b
 
 		&_wrap
 			position: absolute
@@ -880,17 +958,6 @@
 
 	.swiper-slide
 		height: auto
-
-	.swiper-slide-active
-		+r(992)
-			.online__slide_info
-				opacity: 1
-				transition: all 1s
-
-			.online__slide_wrap,
-			.online__slide_img
-				opacity: 0
-				transition: all 1s
 
 
 .info
@@ -1610,25 +1677,23 @@
 
 	&__list
 		display: flex
-		justify-content: space-between
 		flex-wrap: wrap
-		margin: -15px
 
 		+r(1200)
 			margin: -10px
 
 	&__item
-		width: 25%
-		padding: 15px
+		position: relative
+		width: 31%
+		margin: 1%
+		min-height: 400px
 
 		+r(1200)
-			padding: 10px
+			width: 48%
 
-		+r(992)
-			width: 50%
-
-		+r(480)
+		+r(767)
 			width: 100%
+			margin: 0 0 15px
 
 	&__wrap
 		border-radius: 25px
@@ -2603,7 +2668,6 @@
 		&_week
 			display: flex
 			justify-content: space-between
-			align-items: center
 			margin-bottom: 25px
 
 			+r(480)
@@ -2612,14 +2676,7 @@
 			&:last-child
 				margin-bottom: 0
 
-			p
-				margin-bottom: 0
-				width: 20%
-
-				+r(480)
-					width: 100%
-
-			label
+			a
 				display: flex
 				justify-content: center
 				align-items: center
@@ -2638,21 +2695,38 @@
 					width: 30px
 					height: 30px
 
+			.active
+				background-color: $accent
+				color: #ffffff
 
-				&:hover
-					border-color: $accent
+		&_check
+			margin-bottom: 10px
 
-				&:active
-					box-shadow: 0 0 10px 0 rgba($accent, 1)
+		&_text
+			display: flex
+			flex-wrap: wrap
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			flex-shrink: 0
+			margin-right: 25px
 
-			input[type="checkbox"]
+			+r(480)
 				display: none
 
-			input[type="checkbox"]:checked + label
-				background-color: $accent
-				border-color: $accent
-				color: #fff
+			p
+				margin-bottom: 0
+				line-height: 40px
+				margin-bottom: 10px
+				width: 100%
 
+				+r(480)
+					width: 100%
+
+		&_wrap
+			width: 100%
+			display: grid
+			grid-template-columns: repeat(auto-fill, minmax(14%, 1fr))
 
 
 
