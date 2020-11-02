@@ -742,6 +742,10 @@
 				margin-right: 0
 				margin-bottom: 20px
 
+		.online__button
+			+r(992)
+				display: none
+
 	&__slide
 		overflow: hidden
 		border-radius: 25px
@@ -958,8 +962,24 @@
 		.btn
 			margin: 0 auto
 
-	.swiper-container
+	&__slider
+		position: relative
 		overflow: visible
+
+		.online__button
+			display: none
+
+			+r(992)
+				// position: absolute
+				// top: 50%
+				// left: 0
+				// right: 0
+				// transform: translate(0, -50%)
+				display: flex
+				// justify-content: space-between
+				justify-content: center
+				margin-top: 10px
+				z-index: 100
 
 	.swiper-slide
 		height: auto
