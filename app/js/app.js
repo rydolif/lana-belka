@@ -75,6 +75,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			slidesPerView: 1,
 			spaceBetween: 30,
 			effect: 'fade',
+			autoplay: {
+				delay: 5000,
+			},
 			navigation: {
 				nextEl: '.info__next',
 				prevEl: '.info__prev',
