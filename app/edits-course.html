@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Вход</title>
+	<title>Редактор страницы</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.svg">
@@ -78,25 +78,60 @@
 
 	<main class="main">
 
-		<section class="register">
-			<div class="container">
+		<section class="admin">
+			<div class="admin__container container">
 
-				<form class="register__form">
-					<h3>Вход</h3>
-					<div class="data__form_line">
-						<input id="data__mail" type="email" placeholder="Ваш Email" required>
+				<h2>Админ панель</h2>
+
+				<nav class="admin__nav">
+
+					<div class="admin__nav_add">
+						<a href="#" class="btn">добавить курс</a>
+						<a href="#" class="btn">добавить гай</a>
+						<a href="#" class="btn">добавить акцию</a>
 					</div>
-					<div class="data__form_line">
-						<input id="data__pass" type="password" placeholder="Пароль" required>
+
+					<div class="admin__nav_item">
+						<div class="admin__nav_previews">
+							<img src="img/preview.png" alt="">
+						</div>
+						<div class="admin__nav_title">
+							<h3>Список слайдов</h3>
+						</div>
+						<div class="admin__nav_button">
+							<a href="#" class="" title="Редактировать">
+								<img src="img/icon/edit.svg" alt="">
+							</a>
+							<a href="#" class="" title="Редактировать">
+								<img src="img/icon/edit.svg" alt="">
+							</a>
+							<a href="#" class="" title="Удалить">
+								<img src="img/icon/delete.svg" alt="">
+							</a>
+						</div>
 					</div>
-					<div class="register__form_btn">
-						<button class="btn">войти</button>
+
+					<div class="admin__nav_item">
+						<div class="admin__nav_previews">
+							<img src="img/preview2.png" alt="">
+						</div>
+						<div class="admin__nav_title">
+							<h3>Мои курсы</h3>
+						</div>
+						<div class="admin__nav_button">
+							<a href="#" class="" title="Редактировать">
+								<img src="img/icon/edit.svg" alt="">
+							</a>
+							<a href="#" class="" title="Редактировать">
+								<img src="img/icon/edit.svg" alt="">
+							</a>
+							<a href="#" class="" title="Удалить">
+								<img src="img/icon/delete.svg" alt="">
+							</a>
+						</div>
 					</div>
-					<div class="register__form_link register__form_link-two">
-						<a href="#">Еще не зарегистрированы?</a>
-						<a href="#">Забыли пароль?</a>
-					</div>
-				</form>
+
+				</nav>
 
 			</div>
 		</section>
@@ -136,6 +171,7 @@
 
 		</div>
 	</footer>
+
 
 </body>
 </html>

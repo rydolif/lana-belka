@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Вход</title>
+	<title>Редактор страницы</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.svg">
@@ -78,24 +78,51 @@
 
 	<main class="main">
 
-		<section class="register">
-			<div class="container">
+		<section class="admin">
+			<div class="admin__container container">
 
-				<form class="register__form">
-					<h3>Вход</h3>
-					<div class="data__form_line">
-						<input id="data__mail" type="email" placeholder="Ваш Email" required>
+				<h2>Редактировать слайд</h2>
+				<form action="#" class="form" method="POST">
+					<div class="form__item">
+						<label class="form__label">Заголовок*</label>
+						<input type="text" name="name" placeholder="Заголовок" class="form__input _req">
 					</div>
-					<div class="data__form_line">
-						<input id="data__pass" type="password" placeholder="Пароль" required>
+
+					<div class="form__item">
+						<label class="form__label">Текстове поле</label>
+						<textarea name="content" class="form__textarea" placeholder="Текстове поле"></textarea>
 					</div>
-					<div class="register__form_btn">
-						<button class="btn">войти</button>
+
+					<div class="form__item">
+						<label class="form__label">Цена*</label>
+						<input type="text" name="name" placeholder="Цена" class="form__input _req">
 					</div>
-					<div class="register__form_link register__form_link-two">
-						<a href="#">Еще не зарегистрированы?</a>
-						<a href="#">Забыли пароль?</a>
+
+					<div class="form__item">
+						<label class="form__label">Старя цена*</label>
+						<input type="text" name="name" placeholder="Старя цена" class="form__input">
 					</div>
+
+					<div class="form__item">
+						<label class="form__label">Название кнопки*</label>
+						<input type="text" name="name" placeholder="Название кнопки*" class="form__input _req">
+					</div>
+
+					<div class="form__item">
+						<div class="form__label">Прикрепить фото:</div>
+						<div class="form__file">
+							<div class="form__file_item">
+								<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
+								<label class="formLebel form__file_button btn">Выбрать</label>
+							</div>
+							<div id="formPreview" class="formPreview form__file_preview"></div>
+						</div>
+					</div>
+
+					<div class="form__btn">
+						<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+					</div>
+		
 				</form>
 
 			</div>
@@ -136,6 +163,7 @@
 
 		</div>
 	</footer>
+
 
 </body>
 </html>

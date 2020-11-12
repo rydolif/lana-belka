@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Редактор страницы</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.svg">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+	<script src="js/app.min.js" defer></script>
+	<script src="http://cdn.ckeditor.com/4.15.1/basic/ckeditor.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container">
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.png" alt="">
+			</a>
+
+			<nav class="header__nav">
+				<ul class="header__nav_list">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+
+				<div class="header__nav_login">
+					<p>Личный кабинет</p>
+					<ul>
+						<li><a href="#">Вход</a></li>
+						<li><a href="#">Регистрация</a></li>
+					</ul>
+				</div>
+
+				<ul class="header__nav_soc">
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+
+			</nav>
+
+			<nav class="header__soc">
+				<ul>
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+			</nav>
+
+			<div class="header__login">
+				<p>Личный кабинет</p>
+				<ul>
+					<li><a href="#">Вход</a></li>
+					<li><a href="#">Регистрация</a></li>
+				</ul>
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="admin">
+			<div class="admin__container container">
+
+				<h2>Вибрать акционный товар</h2>
+				<form action="#" class="form" method="POST">
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement" class="form__checkbox_label">Название</label>
+							</div>
+						</div>
+	
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement1" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement1" class="form__checkbox_label">Название 1</label>
+							</div>
+						</div>
+	
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement2" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement2" class="form__checkbox_label">Название 2</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form__item">
+						<label class="form__label">Название курса*</label>
+						<input type="text" name="name" placeholder="Название курса" class="form__input _req">
+					</div>
+
+					<div class="form__item">
+						<label class="form__label">Подзаголовок курса*</label>
+						<input type="text" name="name" placeholder="Подзаголовок курса" class="form__input _req">
+					</div>
+
+					<div class="form__item">
+						<label class="form__label">Опис карточки для превью</label>
+						<textarea name="content" class="form__textarea" placeholder="Опис карточки для превью"></textarea>
+					</div>
+
+					<div class="form__item">
+						<label class="form__label">Цена*</label>
+						<input type="text" name="name" placeholder="Цена" class="form__input _req">
+					</div>
+
+					<div class="form__item">
+						<label class="form__label">Старая цена*</label>
+						<input type="text" name="name" placeholder="Старая цена" class="form__input">
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement4" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement4" class="form__checkbox_label">Видео форм</label>
+							</div>
+						</div>
+	
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement5" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement5" class="form__checkbox_label">ПДФ формат</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form__item">
+						<div class="form__label">Выбор уровня</div>
+						<select name="age" id="formAge" class="form__select">
+							<option value="1 уровень">1 уровень</option>
+							<option value="2 уровень">2 уровень</option>
+							<option value="3 уровень">3 уровень</option>
+						</select>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement11" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement11" class="form__checkbox_label">Скрыть блок</label>
+							</div>
+						</div>
+						<div class="form__item">
+							<label class="form__label">Поле 1</label>
+							<input type="text" name="name" placeholder="Поле 1" class="form__input">
+						</div>
+						<div class="form__item">
+							<label class="form__label">Поле 2</label>
+							<input type="text" name="name" placeholder="Поле 2" class="form__input">
+						</div>
+						<div class="form__item">
+							<label class="form__label">Поле 3</label>
+							<input type="text" name="name" placeholder="Поле 3" class="form__input">
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<label class="form__label">Вопрос</label>
+							<input type="text" name="name" placeholder="Вопрос" class="form__input">
+						</div>
+						<div class="form__item">
+							<label class="form__label">Ответ</label>
+							<textarea name="message" class="form__textarea" placeholder="Ответ"></textarea>
+						</div>
+						<div class="admin__nav_add">
+							<a href="#" class="btn">Добавить блок</a>
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<label class="form__label">Заголовок</label>
+							<input type="text" name="name" placeholder="Заголовок" class="form__input">
+						</div>
+						<div class="form__item">
+							<label class="form__label">Текст</label>
+							<textarea name="message" class="form__textarea" placeholder="Текст"></textarea>
+						</div>
+						<div class="form__item">
+							<label class="form__label">Цена*</label>
+							<input type="text" name="name" placeholder="Цена" class="form__input">
+						</div>
+						<div class="admin__nav_wrap">
+							<div class="form__item">
+								<label class="form__label">Видео</label>
+								<input type="text" name="name" placeholder="Видео" class="form__input _req">
+							</div>
+							<div class="admin__nav_add">
+								<a href="#" class="btn">Добавить видео</a>
+							</div>
+						</div>
+						<div class="admin__nav_add">
+							<a href="#" class="btn">Добавить блок</a>
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<p class="form__label">Несколько страниц из с книги</p>
+						</div>
+						<div class="form__item">
+							<div class="form__checkbox">
+								<input id="formAgreement12" type="checkbox" name="agreement" class="form__checkbox_input">
+								<label for="formAgreement12" class="form__checkbox_label">Скрыть</label>
+							</div>
+						</div>
+						<div class="form__item formImgFile">
+							<div class="form__label">1 страница:</div>
+							<div class="form__file">
+								<div class="form__file_item">
+									<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
+									<label class="formLebel form__file_button btn">Выбрать</label>
+								</div>
+								<div id="formPreview" class="formPreview form__file_preview"></div>
+							</div>
+						</div>
+
+						<div class="form__item formImgFile">
+							<div class="form__label">2 страница:</div>
+							<div class="form__file">
+								<div class="form__file_item">
+									<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
+									<label class="formLebel form__file_button btn">Выбрать</label>
+								</div>
+								<div id="formPreview" class="formPreview form__file_preview"></div>
+							</div>
+						</div>
+
+						<div class="form__item formImgFile">
+							<div class="form__label">3 страница:</div>
+							<div class="form__file">
+								<div class="form__file_item">
+									<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
+									<label class="formLebel form__file_button btn">Выбрать</label>
+								</div>
+								<div id="formPreview" class="formPreview form__file_preview"></div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="form__btn">
+						<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+					</div>
+		
+				</form>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container">
+
+			<div class="footer__col">
+				<ul class="footer__nav">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<a href="#" class="footer__logo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<ul class="footer__soc">
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol--white.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk--white.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram--white.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail--white.svg" alt=""></a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<ul class="footer__login">
+					<li><a href="#">Авторизация</a></li>
+					<li><a href="#">Политика конфиденциальности</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+
+
+</body>
+</html>

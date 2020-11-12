@@ -2816,6 +2816,9 @@
 			+r(576)
 				flex-direction: column
 
+			&:hover
+				color: $accent
+
 		&_previews
 			flex-shrink: 0
 			width: 180px
@@ -2836,11 +2839,11 @@
 				margin-right: 0
 
 			img
-				width: 100%
+				width: 100% !important
 				height: auto
 
 		&_title
-			width: 70%
+			width: 80%
 			text-align: left
 
 			+r(576)
@@ -2852,6 +2855,7 @@
 		&_button
 			flex-shrink: 0
 			display: flex
+			align-items: center
 			margin-left: 15px
 
 			+r(576)
@@ -2923,10 +2927,10 @@
 			align-items: center
 			flex-wrap: wrap
 			margin-top: 20px
+			margin-bottom: 20px
 
 			.btn
 				margin: 0 10px 10px
-
 
 	&__info
 
@@ -3018,6 +3022,7 @@
 	&__line
 		margin-bottom: 20px
 
+
 .form
 	display: block
 	position: relative
@@ -3044,6 +3049,9 @@
 
 	&__item
 		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
 
 	&__label
 		font-size: 16px
@@ -3072,6 +3080,10 @@
 		resize: none
 		min-height: 120px
 		padding: 15px
+
+		&::placeholder
+			font-size: 16px
+			line-height: 1.4
 
 	&__options
 
@@ -3139,6 +3151,8 @@
 				max-width: 100%
 
 	&__checkbox
+		width: 100%
+
 		&._error
 			.form__checkbox_label::before
 				box-shadow: 0 0 7px 0 rgba(red, 1)
