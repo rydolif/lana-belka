@@ -178,44 +178,55 @@
 						</div>
 					</div>
 
-					<div class="admin__nav_wrap">
-						<div class="form__item">
-							<label class="form__label">Вопрос</label>
-							<input type="text" name="name" placeholder="Вопрос" class="form__input">
+					<div class="admin__nav_wrap admin__add">
+						<div class="admin__nav_item form__item admin__add_elem">
+							<div class="wrapper__block">
+								<p class="form__item">
+									<input type="text" name="name" placeholder="Задача" class="form__input _req">
+								</p>
+								<p class="form__item">
+									<textarea name="message" class="form__textarea" placeholder="Ответ"></textarea>
+								</p>
+							</div>
+							<div class="admin__nav_button">
+								<a href="javascript: void(0)" type="button" onclick="myFunc(this)" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
 						</div>
-						<div class="form__item">
-							<label class="form__label">Ответ</label>
-							<textarea name="message" class="form__textarea" placeholder="Ответ"></textarea>
-						</div>
-						<div class="admin__nav_add">
-							<a href="#" class="btn">Добавить блок</a>
+						<div class="admin__nav_add admin__nav_button">
+							<button type="button" class="btn" title="Добавить">Добавить Вопрос/Ответ</button>
 						</div>
 					</div>
 
-					<div class="admin__nav_wrap">
-						<div class="form__item">
-							<label class="form__label">Заголовок</label>
-							<input type="text" name="name" placeholder="Заголовок" class="form__input">
-						</div>
-						<div class="form__item">
-							<label class="form__label">Текст</label>
-							<textarea name="message" class="form__textarea" placeholder="Текст"></textarea>
-						</div>
-						<div class="form__item">
-							<label class="form__label">Цена*</label>
-							<input type="text" name="name" placeholder="Цена" class="form__input">
-						</div>
-						<div class="admin__nav_wrap">
+					<div class="admin__section admin__add-block">
+						<h3>Заголовок</h3>
+						<div class="admin__add-block_elem admin__nav_wrap">
 							<div class="form__item">
-								<label class="form__label">Видео</label>
-								<input type="text" name="name" placeholder="Видео" class="form__input _req">
+								<input type="text" name="name" placeholder="Заголовок" class="form__input">
 							</div>
-							<div class="admin__nav_add">
-								<a href="#" class="btn">Добавить видео</a>
+							<div class="form__item">
+								<textarea name="message" class="form__textarea" placeholder="Текст"></textarea>
+							</div>
+							<div class="form__item">
+								<input type="text" name="name" placeholder="Цена" class="form__input">
+							</div>
+							<div class="admin__nav_wrap admin__add">
+								<div class="admin__nav_item admin__add_elem">
+									<input type="text" name="name" placeholder="Видео" class="form__input">
+									<div class="admin__nav_button">
+										<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
+											<img src="img/icon/delete.svg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="admin__nav_add form__btn">
+									<button type="button" class="btn">Добавить видео</button>
+								</div>
 							</div>
 						</div>
-						<div class="admin__nav_add">
-							<a href="#" class="btn">Добавить блок</a>
+						<div class="admin__nav_add form__btn">
+							<button class="btn" title="Добавить">Сохранить</button>
 						</div>
 					</div>
 
@@ -229,9 +240,9 @@
 								<label for="formAgreement12" class="form__checkbox_label">Скрыть</label>
 							</div>
 						</div>
-						<div class="form__item formImgFile">
+						<div class="form__item">
 							<div class="form__label">1 страница:</div>
-							<div class="form__file">
+							<div class="form__file formImgFile">
 								<div class="form__file_item">
 									<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
 									<label class="formLebel form__file_button btn">Выбрать</label>
@@ -240,9 +251,9 @@
 							</div>
 						</div>
 
-						<div class="form__item formImgFile">
+						<div class="form__item">
 							<div class="form__label">2 страница:</div>
-							<div class="form__file">
+							<div class="form__file formImgFile">
 								<div class="form__file_item">
 									<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
 									<label class="formLebel form__file_button btn">Выбрать</label>
@@ -251,9 +262,9 @@
 							</div>
 						</div>
 
-						<div class="form__item formImgFile">
+						<div class="form__item">
 							<div class="form__label">3 страница:</div>
-							<div class="form__file">
+							<div class="form__file formImgFile">
 								<div class="form__file_item">
 									<input accept=".jpg, .png, .gif, .ico" type="file" name="image" class="formImage form__file_input">
 									<label class="formLebel form__file_button btn">Выбрать</label>
@@ -308,6 +319,12 @@
 
 		</div>
 	</footer>
+
+	<script>
+		function myFunc(inputDelete){
+			inputDelete.parentElement.parentElement.remove();
+		}
+	</script>
 
 
 </body>

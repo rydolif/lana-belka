@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Редактор страницы</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.svg">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+	<script src="js/app.min.js" defer></script>
+	<script src="http://cdn.ckeditor.com/4.15.1/basic/ckeditor.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container">
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.png" alt="">
+			</a>
+
+			<nav class="header__nav">
+				<ul class="header__nav_list">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+
+				<div class="header__nav_login">
+					<p>Личный кабинет</p>
+					<ul>
+						<li><a href="#">Вход</a></li>
+						<li><a href="#">Регистрация</a></li>
+					</ul>
+				</div>
+
+				<ul class="header__nav_soc">
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+
+			</nav>
+
+			<nav class="header__soc">
+				<ul>
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail.svg" alt=""></a></li>
+				</ul>
+			</nav>
+
+			<div class="header__login">
+				<p>Личный кабинет</p>
+				<ul>
+					<li><a href="#">Вход</a></li>
+					<li><a href="#">Регистрация</a></li>
+				</ul>
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="admin">
+			<div class="admin__container container">
+
+				<h2>Редактировать слайд</h2>
+
+				<form action="#" class="form" method="POST">
+
+					<div class="admin__nav_wrap">
+						<div class="admin__nav_item">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores placeat adipisci excepturi 
+								impedit. Possimus amet excepturi, adipisci, placeat eligendi modi quae minima explicabo ratione 
+								quibusdam alias dolor laborum labore odit.</p>
+							<div class="admin__nav_button">
+								<a href="#" class="modal__one" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="admin__nav_item">
+							<p>Текст</p>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="admin__nav_item">
+							<p>Текст</p>
+							<div class="admin__nav_button">
+								<a href="#" class="" title="Редактировать">
+									<img src="img/icon/edit.svg" alt="">
+								</a>
+								<a href="#" class="" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<div class="form__item">
+							<textarea name="message"  class="form__textarea" placeholder="Введить тест цели"></textarea>
+						</div>
+						<div class="form__btn">
+							<button  class="btn" title="Сохранить">Сохранить</button>
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap">
+						<h3>Размика</h3>
+						<div class="form__item">
+							<textarea name="message"  class="form__textarea" placeholder="Напишите примечание к уроку"></textarea>
+						</div>
+						<div class="admin__nav_wrap admin__add">
+							<div class="admin__nav_item form__item admin__add_elem">
+								<input type="text" name="name" placeholder="Введите ссылку" class="form__input _req">
+								<div class="admin__nav_button">
+									<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
+										<img src="img/icon/delete.svg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="form__btn">
+								<button type="button" class="btn" title="Добавить">Добавить елемент</button>
+							</div>
+						</div>
+						<div class="form__btn">
+							<button type="button" class="btn" title="Сохранить">Сохранить</button>
+						</div>
+						<div class="admin__nav_wrap">
+							<h3>Добавленые видео в раздел разминка</h3>
+							<div class="form__btn">
+								<a href="#" class="video1 btn" title="Сохранить">Смотреть видео</a>
+								<div class="admin__nav_button">
+									<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
+										<img src="img/icon/delete.svg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__container container">
+
+			<div class="footer__col">
+				<ul class="footer__nav">
+					<li><a href="#">Обо мне</a></li>
+					<li><a href="#">Мои продукты</a></li>
+					<li><a href="#" target="_blank">Youtube</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<a href="#" class="footer__logo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<ul class="footer__soc">
+					<li><a href="https://www.youtube.com/c/ЛанаБелка" target="_blank"><img src="img/icon/youtube-symbol--white.svg" alt=""></a></li>
+					<li><a href="https://vk.com/lana.belka.fitness" target="_blank"><img src="img/icon/vk--white.svg" alt=""></a></li>
+					<li><a href="https://instagram.com/lana.belka.fit" target="_blank"><img src="img/icon/instagram--white.svg" alt=""></a></li>
+					<li><a href="mailto:lana.belka.fit@mail.ru" target="_blank"><img src="img/icon/gmail--white.svg" alt=""></a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col">
+				<ul class="footer__login">
+					<li><a href="#">Авторизация</a></li>
+					<li><a href="#">Политика конфиденциальности</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+
+	<div class="modal" id="modal__one">
+		<form action="#" class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="form__item">
+				<textarea name="message"  class="form__textarea" placeholder="Цель"></textarea>
+			</div>
+
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Сохранить цель</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="video1">
+		<div class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<iframe width="1663" height="738" src="https://www.youtube.com/embed/0K2zwKvMPo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		</div>
+	</div>
+
+	<script>
+		function myFunc(inputDelete){
+			inputDelete.parentElement.parentElement.remove();
+		}
+	</script>
+
+</body>
+</html>

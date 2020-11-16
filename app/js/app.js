@@ -326,17 +326,15 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 
 				const formImgFile = formParent.querySelectorAll('.formImgFile');
-
-				console.log(formImgFile);
+				// console.log(formImgFile);
 
 				formImgFile.forEach(item => { 
 					const elem = 'formImgFile--' + i++;
 	
 					let formId = item.id = (elem);
 					let formParent = document.querySelector('#' + formId);
-					console.log(formParent);
 
-					const formImage = formParent.querySelectorAll('.formImage');
+					const formImage = formParent.querySelector('.formImage');
 					const formLebel = formParent.querySelector('.formLebel');
 					const formPreview = formParent.querySelector('.formPreview');
 
@@ -347,38 +345,38 @@ document.addEventListener("DOMContentLoaded", function() {
 					formImage.id = (formImageNumber);
 					formLebel.htmlFor = ('formImage--' + lebel++);
 					formPreview.id = (formPreviewNumber);
+					console.log(formPreview);
 					const formImageAdd = document.querySelector('#' + formImageNumber);
 
 					// изменения в инпуте файл
 					formImageAdd.addEventListener('change', () =>  {
 						uploadFile(formImage.files[0]);
 					});
-				})
-			
 
-			
-				function uploadFile(file) {
-			
-					if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico'].includes(file.type)) {
-						alert('Только изображения');
-						formImage.value = '';
-						return;
+					function uploadFile(file) {
+				
+						if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico'].includes(file.type)) {
+							alert('Только изображения');
+							formImage.value = '';
+							return;
+						}
+				
+						if (file.size > 2 * 1024 * 1024) {
+							alert('Размер менее 2 мб.');
+							return;
+						}
+				
+						var reader = new FileReader();
+						reader.onload = function (e) {
+							formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+						};
+						reader.onerror = function (e) {
+							alert('Ошибка');
+						};
+						reader.readAsDataURL(file);
 					}
-			
-					if (file.size > 2 * 1024 * 1024) {
-						alert('Размер менее 2 мб.');
-						return;
-					}
-			
-					var reader = new FileReader();
-					reader.onload = function (e) {
-						formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-					};
-					reader.onerror = function (e) {
-						alert('Ошибка');
-					};
-					reader.readAsDataURL(file);
-				}
+				})
+
 			
 				function formAddError(input) {
 					let div = document.createElement('div');
@@ -421,5 +419,37 @@ document.addEventListener("DOMContentLoaded", function() {
 	//----------------------TEXTEAREA-----------------------
 		CKEDITOR.replace('content');
 
+	//----------------------ADD-INPUT-----------------------
+		const adminAdd = (adminAddInput) => {
+			const inputAdd = document.querySelectorAll(adminAddInput);
+			let i = 1;
+
+			inputAdd.forEach(item => {
+				const elem = 'admin__add--' + i++;
+				item.classList.add(elem);
+
+				let inputId = item.id = (elem);
+				let inputParent = document.querySelector('#' + inputId);
+				let inputButton = inputParent.querySelector('button');
+
+				let inputDelete = inputParent.querySelector('.admin__nav_button a');
+
+				inputButton.addEventListener('click', (e) => {
+					e.preventDefault();
+					let parent = document.querySelector('#' + inputId);
+					let elem = inputParent.querySelector('.admin__add_elem');
+					let clone = elem.cloneNode(true);
+					parent.append(clone);
+				});
+
+				function myFunc(inputDelete){
+					inputDelete.parentElement.parentElement.remove();
+				}
+
+			});
+		};
+		adminAdd('.admin__add');
+
+	
 
 });

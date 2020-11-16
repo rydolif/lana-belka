@@ -81,18 +81,15 @@
 		<section class="admin">
 			<div class="admin__container container">
 
-				<h2>Список целей</h2>
+				<h2>Цель 1</h2>
 
-				<nav class="admin__nav">
+				<form action="#" class="form" method="POST">
 
 					<div class="admin__nav_wrap">
-
 						<div class="admin__nav_item">
-							<div class="admin__nav_title">
-								<h3>Цель 1</h3>
-							</div>
+							<h3>Текст</h3>
 							<div class="admin__nav_button">
-								<a href="#" title="Редактировать">
+								<a href="#" class="" title="Редактировать">
 									<img src="img/icon/edit.svg" alt="">
 								</a>
 								<a href="#" class="" title="Удалить">
@@ -100,13 +97,10 @@
 								</a>
 							</div>
 						</div>
-
 						<div class="admin__nav_item">
-							<div class="admin__nav_title">
-								<h3>Цель 1</h3>
-							</div>
+							<h3>Текст</h3>
 							<div class="admin__nav_button">
-								<a href="#" class="modal__one" title="Редактировать">
+								<a href="#" class="" title="Редактировать">
 									<img src="img/icon/edit.svg" alt="">
 								</a>
 								<a href="#" class="" title="Удалить">
@@ -114,13 +108,10 @@
 								</a>
 							</div>
 						</div>
-
 						<div class="admin__nav_item">
-							<div class="admin__nav_title">
-								<h3>Цель 1</h3>
-							</div>
+							<h3>Текст</h3>
 							<div class="admin__nav_button">
-								<a href="#" class="modal__one" title="Редактировать">
+								<a href="#" class="" title="Редактировать">
 									<img src="img/icon/edit.svg" alt="">
 								</a>
 								<a href="#" class="" title="Удалить">
@@ -128,11 +119,52 @@
 								</a>
 							</div>
 						</div>
-
 					</div>
 
-				</nav>
+					<div class="admin__nav_wrap admin__add">
+						<div class="admin__nav_item form__item admin__add_elem">
+							<textarea name="message"  class="form__textarea" placeholder="Цели"></textarea>
+						</div>
+						<div class="form__btn">
+							<button type="button" class="btn" title="Сохранить">Сохранить</button>
+						</div>
+					</div>
 
+					<div class="admin__nav_wrap admin__add">
+						<div class="admin__nav_item form__item">
+							<textarea name="message"  class="form__textarea" placeholder="Примечание к уроку"></textarea>
+						</div>
+						<div class="admin__nav_item">
+							<input type="text" name="name" placeholder="Задача" class="form__input _req">
+						</div>
+						<div class="form__btn">
+							<button type="button" class="btn" title="Сохранить">Сохранить</button>
+						</div>
+					</div>
+
+					<div class="admin__nav_wrap admin__add">
+						<div class="admin__nav_item form__item admin__add_elem">
+							<input type="text" name="name" placeholder="Введите ссылку" class="form__input _req">
+							<div class="admin__nav_button">
+								<div class="admin__nav_previews">
+									<img src="img/preview.png" alt="">
+								</div>
+								<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
+									<img src="img/icon/delete.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="form__btn">
+							<button type="button" class="btn" title="Добавить">Добавить елемент</button>
+						</div>
+					</div>
+
+					<div class="form__btn">
+						<button type="submit" class="btn form__btn_button" name="submit">Сохранить цель</button>
+					</div>
+		
+				</form>
+				
 			</div>
 		</section>
 
@@ -203,129 +235,6 @@
 							<img src="img/preview.png" alt="">
 						</div>
 						<a href="#" onclick="myFunc(this)" title="Удалить">
-							<img src="img/icon/delete.svg" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="form__btn">
-					<button type="button" class="btn" title="Добавить">Добавить елемент</button>
-				</div>
-			</div>
-
-			<div class="admin__nav_wrap admin__add">
-				<div class="admin__nav_item form__item admin__add_elem">
-					<textarea name="message"  class="form__textarea" placeholder="Текст над видео"></textarea>
-					<div class="admin__nav_button">
-						<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
-							<img src="img/icon/delete.svg" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="form__btn">
-					<button type="button" class="btn" title="Добавить">Добавить елемент</button>
-				</div>
-			</div>
-
-			<div class="form__btn">
-				<button type="submit" class="btn form__btn_button" name="submit">Сохранить цель</button>
-			</div>
-
-		</form>
-	</div>
-
-	<div class="modal" id="modal__two">
-		<form action="#" class="modal__form form" method="POST">
-	
-			<button class="close modal__close" type="button">
-				<span></span>
-				<span></span>
-			</button>
-
-			<div class="admin__nav_wrap admin__add">
-				<div class="admin__nav_item admin__add_elem">
-					<input type="text" name="name" placeholder="Задача" class="form__input _req">
-					<div class="admin__nav_button">
-						<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
-							<img src="img/icon/delete.svg" alt="">
-						</a>
-					</div>
-				</div>
-
-
-				<div class="form__btn">
-					<button type="button" class="btn" title="Добавить">Добавить елемент</button>
-				</div>
-			</div>
-
-			<div class="admin__nav_wrap admin__add">
-				<div class="admin__nav_item form__item admin__add_elem">
-					<input type="text" name="name" placeholder="Введите ссылку" class="form__input _req">
-					<div class="admin__nav_button">
-						<div class="admin__nav_previews">
-							<img src="img/preview.png" alt="">
-						</div>
-						<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
-							<img src="img/icon/delete.svg" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="form__btn">
-					<button type="button" class="btn" title="Добавить">Добавить елемент</button>
-				</div>
-			</div>
-
-			<div class="admin__nav_wrap admin__add">
-				<div class="admin__nav_item form__item admin__add_elem">
-					<textarea name="message"  class="form__textarea" placeholder="Текст над видео"></textarea>
-					<div class="admin__nav_button">
-						<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
-							<img src="img/icon/delete.svg" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="form__btn">
-					<button type="button" class="btn" title="Добавить">Добавить елемент</button>
-				</div>
-			</div>
-
-			<div class="form__btn">
-				<button type="submit" class="btn form__btn_button" name="submit">Сохранить цель</button>
-			</div>
-
-		</form>
-	</div>
-
-	<div class="modal" id="modal__three">
-		<form action="#" class="modal__form form" method="POST">
-	
-			<button class="close modal__close" type="button">
-				<span></span>
-				<span></span>
-			</button>
-
-			<div class="admin__nav_wrap admin__add">
-				<div class="admin__nav_item admin__add_elem">
-					<input type="text" name="name" placeholder="Задача" class="form__input _req">
-					<div class="admin__nav_button">
-						<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
-							<img src="img/icon/delete.svg" alt="">
-						</a>
-					</div>
-				</div>
-
-				<div class="form__btn">
-					<button type="button" class="btn" title="Добавить">Добавить елемент</button>
-				</div>
-			</div>
-
-			<div class="admin__nav_wrap admin__add">
-				<div class="admin__nav_item form__item admin__add_elem">
-					<input type="text" name="name" placeholder="Введите ссылку" class="form__input _req">
-					<div class="admin__nav_button">
-						<div class="admin__nav_previews">
-							<img src="img/preview.png" alt="">
-						</div>
-						<a href="javascript: void(0)" onclick="myFunc(this)" title="Удалить">
 							<img src="img/icon/delete.svg" alt="">
 						</a>
 					</div>
