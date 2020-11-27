@@ -3,6 +3,21 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	$.fancybox.defaults.backFocus = false;
+	//----------------------SCROLL-----------------------
+		const scrollTo = (scrollTo) => {
+			document.querySelectorAll('li a[href^="#"').forEach(link => {
+				const button = document.querySelector('.hamburger'),
+							nav = document.querySelector('.header__nav'),
+							header = document.querySelector('.header')
+
+				link.addEventListener('click', function(e) {
+					button.classList.toggle('hamburger--active');
+					nav.classList.toggle('header__nav--active');
+					header.classList.toggle('header--menu');
+				});
+			});
+		};
+		scrollTo('.header__nav_list');
 
 	//----------------------SLIDER-hero----------------------
 		var mySwiper = new Swiper('.hero__slider', {
@@ -21,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//----------------------SLIDER-online----------------------
 		var mySwiper = new Swiper('.online__slider', {
-			loop: true,
+			// loop: true,
 			slidesPerView: 1,
 			spaceBetween: 15,
 			navigation: {
@@ -209,7 +224,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				// $(".action__more--active").removeClass('action__more--active');
 			}
 		});
-
 
 	//----------------------MODAL-----------------------
 		const modals = (modalSelector) => {

@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Он-лайн курс</title>
+	<title>Сертыфикаты</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.svg">
@@ -78,37 +78,28 @@
 
 	<main class="main">
 
-		<section class="crumbs">
-			<div class="crumbs__container container">
-				<a href="#">Личный кабинет</a>
-				<span>/</span>
-				<a href="#">Мои курсы</a>
-				<span>/</span>
-				<span>Он-лайн курс тренировок для новичка «ХОЧУ ФИТНЕС»</span>
-			</div>
-		</section>
-
-		<section class="course">
+		<section class="book">
 			<div class="container">
 
-				<h2>он-лайн курс тренировок для новичка <span>ХОЧУ ФИТНЕС</span></h2>
+				<h2>Несколько страниц из книги:</h2>
 
-				<div class="course__container">
-					<div class="course__article">
-						<h3>Разминка:</h3>
-						<p><b>“Тренировка Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod”</b></p>
-						<iframe src="https://play.boomstream.com/kbyWNIoO" width="100%" height="400" align="left"></iframe>
-					</div>
-					<div class="course__article">
-						<h3>Заминка:</h3>
-						<p><b>“Тренировка Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod”</b></p>
-						<iframe src="https://play.boomstream.com/kbyWNIoO" width="100%" height="400" align="left"></iframe>
-					</div>
-					<div class="course__article">
-						<h3>Тренировка:</h3>
-						<p><b>“Тренировка Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod”</b></p>
-						<iframe src="https://play.boomstream.com/kbyWNIoO" width="100%" height="400" align="left"></iframe>
-					</div>
+				<div class="book__list">
+
+					<a href="img/book__item1.jpg" class="book__item" data-fancybox="book__item">
+						<img src="img/book__item1.jpg" alt="">
+						<span></span>
+					</a>
+
+					<a href="img/book__item2.jpg" class="book__item" data-fancybox="book__item">
+						<img src="img/book__item2.jpg" alt="">
+						<span></span>
+					</a>
+
+					<a href="img/book__item3.jpg" class="book__item" data-fancybox="book__item">
+						<img src="img/book__item3.jpg" alt="">
+						<span></span>
+					</a>
+
 				</div>
 
 			</div>
@@ -149,6 +140,45 @@
 
 		</div>
 	</footer>
+
+	<div class="modal" id="modal__one">
+		<form action="#" class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="form__item">
+				<textarea name="message"  class="form__textarea" placeholder="Цель"></textarea>
+			</div>
+
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Сохранить цель</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="video1">
+		<div class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<iframe width="1663" height="738" src="https://www.youtube.com/embed/0K2zwKvMPo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		</div>
+	</div>
+
+	<script>
+		function myFunc(inputDelete){
+			inputDelete.parentElement.parentElement.remove();
+		}
+	</script>
 
 </body>
 </html>
