@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			breakpoints: {
 				480: {
 					slidesPerView: 1,
-					spaceBetween: 15
+					spaceBetween: 15,
 				},
 				992: {
 					slidesPerView: 2,
@@ -111,6 +111,32 @@ document.addEventListener("DOMContentLoaded", function() {
 			spaceBetween: 15,
 			pagination: {
 				el: '.work__pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 15
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 15
+				},
+				1200: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				}
+			}
+		});
+
+	//----------------------SLIDER-book----------------------
+		var mySwiper = new Swiper('.book__slider', {
+			loop: true,
+			slidesPerView: 2,
+			spaceBetween: 15,
+			pagination: {
+				el: '.book__pagination',
 				type: 'bullets',
 				clickable: true,
 			},
