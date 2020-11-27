@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 					function uploadFile(file) {
 				
-						if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico'].includes(file.type)) {
+						if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico', 'application/pdf'].includes(file.type)) {
 							alert('Только изображения');
 							formImage.value = '';
 							return;
@@ -408,7 +408,12 @@ document.addEventListener("DOMContentLoaded", function() {
 				
 						var reader = new FileReader();
 						reader.onload = function (e) {
-							formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+							if(['application/pdf'].includes(file.type)) {
+								formPreview.innerHTML = `Файл выбран`;
+							}else{
+								formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+							}
+							
 						};
 						reader.onerror = function (e) {
 							alert('Ошибка');
