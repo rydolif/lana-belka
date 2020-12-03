@@ -3240,12 +3240,24 @@
 
 	&__grid
 		display: grid
-		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-columns: auto 1fr 1fr 1fr
 		grid-gap: 15px
+		border: 1px solid $bg
+		padding: 20px
+		border-radius: 20px
+
+		+r(576)
+			padding: 0
+			border-radius: 5px
+			grid-gap: 5px
+			border: 0
 		
 		+r(480)
 			font-size: 12px
 
+		&_item
+			border-bottom: 1px solid $bg
+			padding: 5px
 
 
 
