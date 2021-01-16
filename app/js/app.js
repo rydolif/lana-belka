@@ -274,21 +274,20 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	
 	//------------------------------more---------------------------
-		$(".action__more").slideUp("slow");
+		// $(".action__more").slideUp("slow");
 		$(".more").on("click", function(){
 			event.preventDefault();
 
 			if ($(".action__more").hasClass('action__more--active')) {
-				$(".action__more").slideUp("slow");
 				$(".more").html('ЧИТАТЬ ДАЛЕЕ');
 				$(".action__more--active").removeClass('action__more--active');
 				$(".action__more").addClass('action__more');
+				$(".action__more").css({height: '400px'});
 			}
 			else {
-				$(".action__more").slideDown("slow");
+				$(".action__more").css({height: 'calc(100% - 45px)'});
 				$(".more").html('Скрыть текст');
 				$(".action__more").addClass('action__more--active');
-				// $(".action__more--active").removeClass('action__more--active');
 			}
 		});
 

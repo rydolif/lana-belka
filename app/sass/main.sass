@@ -502,6 +502,31 @@
 			margin: 0 auto
 			border-radius: 25px
 
+	&__bunner
+		position: absolute
+		top: 10px
+		left: 30px
+		width: 100px
+		height: 100px
+
+		+r(1440)
+			top: -5px
+			left: 20px
+			width: 60px
+			height: 60px
+
+		+r(767)
+			left: auto
+			right: 30px
+
+		+r(480)
+			right: auto
+			left: 30px
+
+		img
+			width: 100%
+			height: 100%
+
 	&__slide
 		position: relative
 		padding: 110px 0
@@ -606,6 +631,11 @@
 
 	&__img
 
+		+r(480)
+			display: flex
+			justify-content: center
+			margin-bottom: 20px
+
 		img
 			position: absolute
 			right: 0
@@ -622,11 +652,29 @@
 				bottom: -80px
 			
 			+r(576)
-				min-width: 230px
+				min-width: 330px
 
 			+r(480)
 				position: relative
 				bottom: 0
+
+		&--one
+
+		&--two
+
+			+r(480)
+				display: flex
+				justify-content: flex-end
+				margin-right: -10px
+
+				img
+					margin-right: 0
+					margin-left: auto
+
+		&--three
+			+r(480)
+				margin-left: 50px
+
 
 	.container
 		+r(480)
@@ -2093,7 +2141,9 @@
 				color: $text
 
 	&__description
+		+transition
 		width: 59%
+		height: auto
 
 		+r(767)
 			width: 100%
@@ -2126,10 +2176,7 @@
 		&_more
 			display: flex
 			justify-content: flex-end
-			margin-top: 40px
-
-			+r(1200)
-				margin-top: 25px
+			margin-top: 25px
 
 			a
 				color: $btn
@@ -2162,6 +2209,29 @@
 
 			b
 				color: $accent
+
+	&__more
+		+transition
+		position: relative
+		height: 400px
+		overflow: hidden
+
+		&::before
+			+transition
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 0
+			right: 0
+			height: 55px
+			width: 100%
+			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%)
+		
+		&--active
+			height: auto
+
+			&::before
+				height: 0
 
 
 .trainer
@@ -3277,4 +3347,6 @@
 
 	input[type="checkbox"]:checked + label::after
 		transform: translate(2px, -1px) scale(1) rotate(-135deg)
-	
+
+
+
