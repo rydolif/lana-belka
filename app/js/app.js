@@ -3,21 +3,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	$.fancybox.defaults.backFocus = false;
-	// //----------------------SCROLL-----------------------
-	// 	const scrollTo = (scrollTo) => {
-	// 		document.querySelectorAll('li a[href^="#"').forEach(link => {
-	// 			const button = document.querySelector('.hamburger'),
-	// 						nav = document.querySelector('.header__nav'),
-	// 						header = document.querySelector('.header')
-
-	// 			link.addEventListener('click', function(e) {
-	// 				button.classList.toggle('hamburger--active');
-	// 				nav.classList.toggle('header__nav--active');
-	// 				header.classList.toggle('header--menu');
-	// 			});
-	// 		});
-	// 	};
-	// 	scrollTo('.header__nav_list');
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
@@ -274,7 +259,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	
 	//------------------------------more---------------------------
-		// $(".action__more").slideUp("slow");
 		$(".more").on("click", function(){
 			event.preventDefault();
 
@@ -501,9 +485,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		forms('.form');
 
-	//----------------------TEXTEAREA-----------------------
-		// CKEDITOR.replace('content');
-
 	//----------------------ADD-INPUT-----------------------
 		const adminAdd = (adminAddInput) => {
 			const inputAdd = document.querySelectorAll(adminAddInput);
@@ -534,7 +515,5 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		};
 		adminAdd('.admin__add');
-
-	
 
 });
