@@ -515,4 +515,5 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		adminAdd('.admin__add');
 
+		
 });
